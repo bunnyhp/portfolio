@@ -1,34 +1,113 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Cybersecurity Portfolio Styles */
+
+* {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
+    background: #000000;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
 }
 
-.App-link {
-    color: #61dafb;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff41;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc33;
+}
+
+/* Text Selection */
+::selection {
+    background: #00ff41;
+    color: #000000;
+}
+
+::-moz-selection {
+    background: #00ff41;
+    color: #000000;
+}
+
+/* Cyber Grid Animation */
+@keyframes gridMove {
+    0% {
+        transform: translateY(0);
     }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+/* Scan Line Animation */
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+    0%, 100% {
+        text-shadow: 0 0 10px #00ff41;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41;
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Loading Spinner */
+@keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* Utilities */
+.text-glow {
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+}
+
+.border-glow {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
