@@ -4,6 +4,10 @@ import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { personalInfo } from '../mockData';
 import { useToast } from '../hooks/use-toast';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 export default function ContactSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -24,16 +28,27 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock submission - in production, this would call backend API
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      
       toast({
         title: "Message Sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
         duration: 5000,
       });
+      
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: "Error",
+        description: error.response?.data?.detail || "Failed to send message. Please try again.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
