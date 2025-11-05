@@ -69,10 +69,17 @@ class ContactSubmissionsResponse(BaseModel):
     total: int
     submissions: List[ContactSubmission]
 
-# Add your routes to the router instead of directly to app
+# Routes
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {
+        "message": "Welcome to Harshil Patel's Portfolio API",
+        "version": "1.0.0",
+        "endpoints": {
+            "contact": "/api/contact",
+            "submissions": "/api/contact/submissions"
+        }
+    }
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
