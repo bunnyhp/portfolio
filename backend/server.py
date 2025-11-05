@@ -105,6 +105,116 @@ async def get_status_checks():
     
     return status_checks
 
+
+# Contact Form Endpoints
+@api_router.post("/contact", response_model=ContactSubmission, status_code=201)
+async def submit_contact_form(
+    submission: ContactSubmissionCreate,
+    request: Request
+):
+    """
+    Submit a contact form message.
+    
+    - **name**: Full name of the sender
+    - **email**: Valid email address
+    - **subject**: Subject of the message
+    - **message**: Detailed message (min 10 characters)
+    """
+    try:
+        # Get client IP address
+        client_ip = request.client.host if request.client else "unknown"
+        
+        # Create submission object
+        submission_data = submission.model_dump()
+        contact_obj = ContactSubmission(**submission_data, ip_address=client_ip)
+        
+        # Convert to dict and serialize datetime to ISO string for MongoDB
+        doc = contact_obj.model_dump()
+        doc['timestamp'] = doc['timestamp'].isoformat()
+        
+        # Insert into database
+        result = await db.contact_submissions.insert_one(doc)
+        
+        if result.inserted_id:
+            logger.info(f"Contact form submitted: {submission.email} - {submission.subject}")
+            return contact_obj
+        else:
+            raise HTTPException(status_code=500, detail="Failed to save submission")
+            
+    except Exception as e:
+        logger.error(f"Error submitting contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while processing your request")
+
+
+@api_router.get("/contact/submissions", response_model=ContactSubmissionsResponse)
+async def get_contact_submissions(
+    limit: int = 50,
+    skip: int = 0,
+    status: Optional[str] = None
+):
+    """
+    Get all contact form submissions (Admin endpoint).
+    
+    - **limit**: Maximum number of submissions to return (default: 50, max: 100)
+    - **skip**: Number of submissions to skip for pagination
+    - **status**: Filter by status (pending, read, replied)
+    """
+    try:
+        # Validate limit
+        if limit > 100:
+            limit = 100
+            
+        # Build query
+        query = {}
+        if status:
+            if status not in ["pending", "read", "replied"]:
+                raise HTTPException(status_code=400, detail="Invalid status filter")
+            query["status"] = status
+        
+        # Get total count
+        total = await db.contact_submissions.count_documents(query)
+        
+        # Get submissions (exclude MongoDB's _id field)
+        cursor = db.contact_submissions.find(query, {"_id": 0}).sort("timestamp", -1).skip(skip).limit(limit)
+        submissions = await cursor.to_list(length=limit)
+        
+        # Convert ISO string timestamps back to datetime objects
+        for sub in submissions:
+            if isinstance(sub['timestamp'], str):
+                sub['timestamp'] = datetime.fromisoformat(sub['timestamp'])
+        
+        return ContactSubmissionsResponse(
+            total=total,
+            submissions=submissions
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching submissions: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while fetching submissions")
+
+
+@api_router.get("/health")
+async def health_check():
+    """Health check endpoint"""
+    try:
+        # Test database connection
+        await db.command("ping")
+        return {
+            "status": "healthy",
+            "database": "connected",
+            "timestamp": datetime.now(timezone.utc)
+        }
+    except Exception as e:
+        logger.error(f"Health check failed: {str(e)}")
+        return {
+            "status": "unhealthy",
+            "database": "disconnected",
+            "error": str(e),
+            "timestamp": datetime.now(timezone.utc)
+        }
+
 # Include the router in the main app
 app.include_router(api_router)
 
