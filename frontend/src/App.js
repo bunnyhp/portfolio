@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </Routes>
         <Footer />
         <Toaster />
+        <Analytics />
       </BrowserRouter>
     </div>
   );
