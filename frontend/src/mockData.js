@@ -209,6 +209,7 @@ export const projects = [
     id: 4,
     title: "Automated Vulnerability Categorization & Prioritization",
     category: "Research",
+    link: "https://github.com/bunnyhp/Automated-Vulnerability-Categorization",
     spotlight: true,
     description: "Analyzed campus-wide vulnerabilities using Vulners.com API for remediation and prioritization. Applied machine learning and product-vision strategies for security automation.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
@@ -226,6 +227,7 @@ export const projects = [
     id: 5,
     title: "iOS Forensic Demonstration - Cybersecurity Fundamentals",
     category: "Research",
+    link: "https://github.com/bunnyhp/iOS-Forensic",
     description: "Built a forensic lab using iLEAPP tool on iPhone 8 Plus for forensic artifact extraction, demonstrating mobile device security and investigation techniques.",
     image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&q=80",
     tech: ["iLEAPP", "iOS Forensics", "Mobile Security", "Digital Forensics", "iPhone Analysis"],
@@ -242,6 +244,7 @@ export const projects = [
     id: 6,
     title: "Honeypot to Analyze Cyber Threats",
     category: "DevSecOps",
+    link: "https://github.com/bunnyhp/honeypot",
     description: "Developed and deployed honeypot systems to attract, analyze, and study cyber threats, providing valuable threat intelligence and attack pattern analysis.",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
     tech: ["Honeypot", "Threat Intelligence", "Threat Analysis", "Python", "Network Security", "SIEM"],
@@ -544,7 +547,7 @@ export const education = [
     location: "Ahmedabad, India",
     period: "August 2016 - May 2019",
     gpa: "Completed",
-    description: "Comprehensive foundation in science and technology with focus on computer systems, programming, and technical problem-solving skills."
+    description: "Comprehensive foundation in science and technology with focus on Pharmaceutical systems, chemistry, and technical problem-solving skills."
   }
 ];
 
