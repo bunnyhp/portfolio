@@ -47,82 +47,91 @@ export default function ProjectsSection() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-white rounded-lg overflow-hidden border border-[#155724]/30 hover:border-[#155724]/50 transition-all hover:shadow-xl hover:shadow-[#155724]/10 shadow-md"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group bg-white rounded-xl overflow-hidden border border-[#155724]/20 hover:border-[#155724]/40 transition-all hover:shadow-2xl hover:shadow-[#155724]/15 shadow-md hover:-translate-y-1 duration-300"
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden bg-gray-100">
+              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 
-                {/* Spotlight Badge */}
-                {project.spotlight && (
-                  <div className="absolute top-4 right-4 bg-[#155724] text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                    <Star className="w-3 h-3 mr-1" fill="currentColor" />
-                    Featured
-                  </div>
-                )}
-
-                {/* Category */}
-                <div className="absolute bottom-4 left-4">
-                  <span className="bg-black/70 backdrop-blur-sm px-3 py-1 rounded-md text-[#155724] text-xs font-semibold border border-[#155724]/30">
+                {/* Badges Container */}
+                <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
+                  {/* Category Badge */}
+                  <span className="bg-[#155724] text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg">
                     {project.category}
+                  </span>
+                  
+                  {/* Featured Badge */}
+                  {project.spotlight && (
+                    <div className="bg-white/95 backdrop-blur-sm text-[#155724] px-3 py-1.5 rounded-lg text-xs font-bold flex items-center shadow-lg">
+                      <Star className="w-3 h-3 mr-1.5" fill="currentColor" />
+                      Featured
+                    </div>
+                  )}
+                </div>
+
+                {/* Year Badge */}
+                <div className="absolute bottom-4 right-4">
+                  <span className="bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">
+                    {project.year}
                   </span>
                 </div>
               </div>
 
               {/* Project Content */}
               <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#155724] transition-colors">
-                    {project.title}
-                  </h3>
-                  <span className="text-gray-600 text-sm font-mono">{project.year}</span>
-                </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#155724] transition-colors">
+                  {project.title}
+                </h3>
 
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{project.description}</p>
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                  {project.description}
+                </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-5 min-h-[28px]">
                   {project.tech.slice(0, 3).map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 bg-gray-50 border border-[#155724]/30 text-[#155724] text-xs rounded font-mono"
+                      className="px-2.5 py-1 bg-[#155724]/5 border border-[#155724]/20 text-[#155724] text-xs rounded-md font-medium hover:bg-[#155724]/10 transition-colors"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.tech.length > 3 && (
-                    <span className="px-2 py-1 bg-black/50 border border-[#155724]/30 text-[#155724] text-xs rounded font-mono">
-                      +{project.tech.length - 3}
+                    <span className="px-2.5 py-1 bg-[#155724]/10 border border-[#155724]/30 text-[#155724] text-xs rounded-md font-bold">
+                      +{project.tech.length - 3} more
                     </span>
                   )}
                 </div>
 
-                {/* Links */}
-                <div className="flex items-center space-x-3 pt-4 border-t border-gray-200">
+                {/* Action Buttons */}
+                <div className="flex items-center gap-2">
                   {project.link ? (
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 px-4 py-2 bg-[#155724] text-white font-semibold rounded-md hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center space-x-2"
+                      className="flex-1 px-4 py-2.5 bg-[#155724] text-white font-semibold rounded-lg hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span>View Details</span>
                     </a>
                   ) : (
-                    <button className="flex-1 px-4 py-2 bg-[#155724] text-white font-semibold rounded-md hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center space-x-2">
+                    <button className="flex-1 px-4 py-2.5 bg-[#155724] text-white font-semibold rounded-lg hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
                       <ExternalLink className="w-4 h-4" />
                       <span>View Details</span>
                     </button>
@@ -132,10 +141,10 @@ export default function ProjectsSection() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-gray-100 rounded-md hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all"
+                      className="p-2.5 bg-gray-100 rounded-lg hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all border border-gray-200 hover:border-[#155724]/30"
                       title="View on GitHub"
                     >
-                      <Github className="w-4 h-4" />
+                      <Github className="w-5 h-5" />
                     </a>
                   )}
                   {project.liveUrl && (
@@ -143,10 +152,10 @@ export default function ProjectsSection() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-gray-100 rounded-md hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all"
+                      className="p-2.5 bg-gray-100 rounded-lg hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all border border-gray-200 hover:border-[#155724]/30"
                       title="View Live Site"
                     >
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-5 h-5" />
                     </a>
                   )}
                 </div>
