@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Shield, ArrowUp, Heart, MapPin, Phone, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp, Heart, MapPin, Phone, Send } from 'lucide-react';
 import { personalInfo } from '../mockData';
 
 export default function Footer() {
@@ -43,14 +43,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#155724] to-[#0d3e1a] rounded-xl flex items-center justify-center shadow-lg">
-                <Shield className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <span className="text-2xl font-bold text-white">HARSHIL<span className="text-[#28a745]">.</span></span>
-                <p className="text-xs text-gray-400">Security Engineer</p>
-              </div>
+            <div className="mb-6">
+              <span className="text-3xl font-bold text-white">HARSHIL <span className="text-[#28a745]">P.</span></span>
+              <p className="text-sm text-gray-400 mt-2">Security Engineer</p>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Cybersecurity Engineer specializing in SIEM analysis, incident response, and threat hunting. Passionate about securing digital assets.

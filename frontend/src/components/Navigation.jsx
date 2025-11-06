@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navigation() {
@@ -29,15 +29,18 @@ export default function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-lg border-b border-[#155724]/20 shadow-md' : 'bg-white/90 backdrop-blur-sm'
+        scrolled 
+          ? 'bg-gray-900/95 backdrop-blur-lg border-b border-white/10 shadow-xl shadow-black/20' 
+          : 'bg-gray-900/90 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2 group">
-            <Shield className="w-8 h-8 text-[#155724] transition-transform group-hover:scale-110" />
-            <span className="text-xl font-bold text-gray-900 tracking-tight">HARSHIL<span className="text-[#155724]">.</span></span>
+          <a href="/" className="group">
+            <span className="text-2xl font-bold text-white tracking-tight transition-all group-hover:text-[#28a745]">
+              HARSHIL <span className="text-[#28a745]">P.</span>
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -47,16 +50,18 @@ export default function Navigation() {
                 key={link.path}
                 href={link.path}
                 className={`text-sm font-medium transition-colors relative group ${
-                  location.hash === link.path || (link.path === '#home' && location.pathname === '/') ? 'text-[#155724]' : 'text-gray-700 hover:text-gray-900'
+                  location.hash === link.path || (link.path === '#home' && location.pathname === '/') 
+                    ? 'text-[#28a745]' 
+                    : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#155724] transition-all group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#28a745] transition-all group-hover:w-full" />
               </a>
             ))}
             <a
               href="#contact"
-              className="px-6 py-2 bg-[#155724] text-white font-semibold rounded-md hover:bg-[#155724]/90 transition-all hover:shadow-lg hover:shadow-[#155724]/50"
+              className="px-6 py-2 bg-gradient-to-r from-[#155724] to-[#0d3e1a] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#155724]/50 transition-all hover:-translate-y-0.5"
             >
               Hire Me
             </a>
@@ -65,7 +70,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-900 hover:text-[#155724] transition-colors"
+            className="md:hidden text-white hover:text-[#28a745] transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -79,7 +84,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/95 backdrop-blur-lg border-b border-[#155724]/20 shadow-md"
+            className="md:hidden bg-gray-800/95 backdrop-blur-lg border-t border-white/10 shadow-xl"
           >
             <div className="px-6 py-4 space-y-4">
               {navLinks.map((link) => (
@@ -88,7 +93,9 @@ export default function Navigation() {
                   href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`block text-sm font-medium transition-colors ${
-                    location.hash === link.path || (link.path === '#home' && location.pathname === '/') ? 'text-[#155724]' : 'text-gray-700 hover:text-gray-900'
+                    location.hash === link.path || (link.path === '#home' && location.pathname === '/') 
+                      ? 'text-[#28a745]' 
+                      : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {link.name}
@@ -97,7 +104,7 @@ export default function Navigation() {
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full px-6 py-2 bg-[#155724] text-white text-center font-semibold rounded-md hover:bg-[#155724]/90 transition-all"
+                className="block w-full px-6 py-2 bg-gradient-to-r from-[#155724] to-[#0d3e1a] text-white text-center font-semibold rounded-lg hover:shadow-xl hover:shadow-[#155724]/50 transition-all"
               >
                 Hire Me
               </a>
