@@ -1,77 +1,170 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Shield } from 'lucide-react';
+import { Github, Linkedin, Mail, Shield, ArrowUp, Heart, MapPin, Phone, Send } from 'lucide-react';
 import { personalInfo } from '../mockData';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const quickLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Certifications', href: '#certifications' },
+    { name: 'Contact', href: '#contact' }
+  ];
+
+  const socialLinks = [
+    { icon: Github, href: personalInfo.github, name: 'GitHub', color: 'hover:bg-gray-800' },
+    { icon: Linkedin, href: personalInfo.linkedin, name: 'LinkedIn', color: 'hover:bg-blue-600' },
+    { icon: Mail, href: `mailto:${personalInfo.email}`, name: 'Email', color: 'hover:bg-[#155724]' }
+  ];
+
   return (
-    <footer className="bg-white border-t border-[#155724]/30 py-12 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <Shield className="w-6 h-6 text-[#155724]" />
-              <span className="text-xl font-bold text-gray-900">HARSHIL<span className="text-[#155724]">.</span></span>
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, #155724 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#155724]/20 to-transparent opacity-50" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+        {/* Main Footer Content */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#155724] to-[#0d3e1a] rounded-xl flex items-center justify-center shadow-lg">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <span className="text-2xl font-bold text-white">HARSHIL<span className="text-[#28a745]">.</span></span>
+                <p className="text-xs text-gray-400">Security Engineer</p>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Cybersecurity Engineer specializing in threat detection, cloud security, and DevSecOps.
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Cybersecurity Engineer specializing in SIEM analysis, incident response, and threat hunting. Passionate about securing digital assets.
             </p>
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span>Available for opportunities</span>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-600 hover:text-[#155724] text-sm transition-colors">About</a></li>
-              <li><a href="#experience" className="text-gray-600 hover:text-[#155724] text-sm transition-colors">Experience</a></li>
-              <li><a href="#projects" className="text-gray-600 hover:text-[#155724] text-sm transition-colors">Projects</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-[#155724] text-sm transition-colors">Contact</a></li>
+            <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+              <div className="w-1 h-5 bg-[#155724] rounded-full" />
+              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-gray-400 hover:text-[#28a745] text-sm transition-all flex items-center gap-2 group"
+                  >
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#28a745] transition-all duration-300" />
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Get In Touch</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-gray-600">{personalInfo.email}</li>
-              <li className="text-gray-600">{personalInfo.phone}</li>
-              <li className="text-gray-600">{personalInfo.location}</li>
+            <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+              <div className="w-1 h-5 bg-[#155724] rounded-full" />
+              Get In Touch
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 group">
+                <Mail className="w-5 h-5 text-[#155724] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <a href={`mailto:${personalInfo.email}`} className="text-gray-400 hover:text-[#28a745] text-sm break-all transition-colors">
+                  {personalInfo.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <Phone className="w-5 h-5 text-[#155724] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <a href={`tel:${personalInfo.phone}`} className="text-gray-400 hover:text-[#28a745] text-sm transition-colors">
+                  {personalInfo.phone}
+                </a>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <MapPin className="w-5 h-5 text-[#155724] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <span className="text-gray-400 text-sm">
+                  {personalInfo.location}
+                </span>
+              </li>
             </ul>
-            {/* Social Links */}
-            <div className="flex items-center space-x-3 mt-4">
-              <a
-                href={personalInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-gray-100 rounded-full hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-gray-100 rounded-full hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="p-2 bg-gray-100 rounded-full hover:bg-[#155724]/10 hover:text-[#155724] text-gray-700 transition-all"
-              >
-                <Mail className="w-4 h-4" />
-              </a>
+          </div>
+
+          {/* Social & CTA */}
+          <div>
+            <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+              <div className="w-1 h-5 bg-[#155724] rounded-full" />
+              Connect
+            </h3>
+            <p className="text-gray-400 text-sm mb-6">
+              Let's connect and discuss how I can help secure your digital infrastructure.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#155724]/50 group`}
+                  title={social.name}
+                >
+                  <social.icon className="w-5 h-5 text-white" />
+                </a>
+              ))}
             </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#155724] to-[#0d3e1a] text-white rounded-xl font-semibold text-sm hover:shadow-xl hover:shadow-[#155724]/30 transition-all duration-300 hover:-translate-y-1 w-full justify-center"
+            >
+              <Send className="w-4 h-4" />
+              <span>Send Message</span>
+            </a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 flex justify-center items-center">
-          <p className="text-gray-600 text-sm">
-            © {currentYear} {personalInfo.name}. All rights reserved.
-          </p>
+        {/* Divider */}
+        <div className="border-t border-white/10 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <span>© {currentYear} {personalInfo.name}. All rights reserved.</span>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-400">Made with</span>
+              <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
+              <span className="text-sm text-gray-400">for Cybersecurity</span>
+            </div>
+
+            {/* Back to Top Button */}
+            <button
+              onClick={scrollToTop}
+              className="group flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-[#155724] border border-white/20 rounded-lg text-sm text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#155724]/50"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>
