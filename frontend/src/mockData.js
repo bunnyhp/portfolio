@@ -6,7 +6,7 @@ export const personalInfo = {
   tagline: "Securing digital assets through SIEM analysis, incident response, and threat hunting.",
   email: "mail2harshilppatel@gmail.com",
   phone: "+1 (312) 438-0016",
-  location: "Toledo, Ohio",
+  location: "Austin, Texas",
   linkedin: "https://www.linkedin.com/in/harshil-patel-security-engineer/",
   github: "https://github.com/bunnyhp",
   bio: "A highly driven and accomplished Security Engineer with extensive hands-on experience in SIEM analysis, incident response, and threat hunting. Currently serving as an Education Coach at The University of Toledo, supporting individuals with disabilities in their academic and professional development. Previously worked as a Security Operations Center Analyst at CRS Laboratories, where I monitored security events using Splunk SIEM, analyzed 50,000+ daily events, and conducted threat hunting exercises using MITRE ATT&CK framework. Specialized in log correlation, threat hunting, cloud security, and vulnerability management. Passionate about cybersecurity and making a meaningful impact through education and mentorship."
@@ -532,19 +532,19 @@ export const certifications = [
 export const education = [
   {
     degree: "Master's in Cyber Security Systems",
-    institution: "Florida Institute of Technology",
-    location: "Florida, USA",
+    institution: "University of Toledo",
+    location: "Toledo, Ohio, USA",
     period: "August 2021 - May 2023",
     gpa: "Completed",
     description: "Advanced studies in cybersecurity systems, focusing on SIEM analysis, incident response, threat hunting, and security operations. Gained expertise in security event analysis, log correlation, and threat intelligence."
   },
   {
-    degree: "Bachelor's in Cyber Security Systems",
-    institution: "SUNY at Albany",
-    location: "Albany, NY, USA",
+    degree: "Bachelor's in Science",
+    institution: "GTU (Gujarat Technological University)",
+    location: "Ahmedabad, India",
     period: "August 2016 - May 2019",
     gpa: "Completed",
-    description: "Comprehensive foundation in cybersecurity principles, network security, security operations, and incident response. Developed strong analytical and problem-solving skills in security contexts."
+    description: "Comprehensive foundation in science and technology with focus on computer systems, programming, and technical problem-solving skills."
   }
 ];
 
