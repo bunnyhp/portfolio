@@ -111,10 +111,22 @@ export default function ProjectsSection() {
 
                 {/* Links */}
                 <div className="flex items-center space-x-3 pt-4 border-t border-gray-200">
-                  <button className="flex-1 px-4 py-2 bg-[#155724] text-white font-semibold rounded-md hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center space-x-2">
-                    <ExternalLink className="w-4 h-4" />
-                    <span>View Details</span>
-                  </button>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-4 py-2 bg-[#155724] text-white font-semibold rounded-md hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center space-x-2"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>View Details</span>
+                    </a>
+                  ) : (
+                    <button className="flex-1 px-4 py-2 bg-[#155724] text-white font-semibold rounded-md hover:bg-[#155724]/90 transition-all text-sm flex items-center justify-center space-x-2">
+                      <ExternalLink className="w-4 h-4" />
+                      <span>View Details</span>
+                    </button>
+                  )}
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}

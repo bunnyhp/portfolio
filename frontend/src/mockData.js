@@ -160,6 +160,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
     tech: ["Cyber Defense", "Incident Response", "Vulnerability Mitigation", "Team Leadership", "Security Simulation"],
     year: "2024",
+    link: "https://www.linkedin.com/posts/harshil-patel-security-engineer_cyberforcecompetition-cyberforce2024-cybersecurity-activity-7266242172541124609-Jw_w",
     details: [
       "Led team as Captain in Department of Energy CyberForce Competition",
       "Scored 5308 points through effective defense strategies",
@@ -172,6 +173,7 @@ export const projects = [
     id: 2,
     title: "Evolution of Clinical Trials - Pitch Competition",
     category: "Competitions",
+    link: "https://github.com/bunnyhp/Certificates/blob/main/20200207061351_IMG_7892.JPG",
     spotlight: true,
     description: "State-level pitch competition achieving 3rd rank on big-data driven clinical trial automation, focusing on security and privacy in healthcare data.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
