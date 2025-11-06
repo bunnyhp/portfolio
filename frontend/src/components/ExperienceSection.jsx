@@ -31,76 +31,77 @@ export default function ExperienceSection() {
           <div className="w-20 h-1 bg-[#155724] mx-auto" />
         </motion.div>
 
-        <div className="relative">
+        <div className="relative max-w-5xl mx-auto">
           {/* Timeline Line */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#155724] via-[#28a745] to-transparent" />
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#155724] to-[#155724]/20" />
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {experience.map((job, index) => (
               <motion.div
                 key={job.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="relative"
               >
-                {/* Content */}
-                <div className="flex-1 lg:text-right lg:pr-12">
-                  <div className={`bg-white border border-[#155724]/30 rounded-lg p-6 hover:border-[#155724]/50 transition-all hover:shadow-lg hover:shadow-[#155724]/10 shadow-md ${index % 2 === 0 ? '' : 'lg:text-left lg:pr-0 lg:pl-12'}`}>
-                    <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                      <h3 className="text-2xl font-bold text-gray-900">{job.title}</h3>
-                      <span className="px-3 py-1 bg-[#155724]/20 text-[#155724] text-xs font-semibold rounded-full border border-[#155724]/30">
-                        {job.type}
-                      </span>
-                    </div>
-                    
-                    <div className="flex items-center space-x-4 mb-4 text-gray-600 text-sm flex-wrap">
-                      <div className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-1 text-[#155724]" />
-                        {job.company}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1 text-[#155724]" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1 text-[#155724]" />
-                        {job.period}
+                {/* Timeline Dot */}
+                <div className="hidden md:block absolute left-8 top-8 transform -translate-x-1/2">
+                  <div className="w-4 h-4 bg-[#155724] rounded-full border-4 border-white shadow-md z-10 relative" />
+                </div>
+
+                {/* Content Card */}
+                <div className="md:ml-16 bg-white border border-[#155724]/30 rounded-xl p-8 hover:border-[#155724]/50 transition-all hover:shadow-xl hover:shadow-[#155724]/10 shadow-md">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
+                      <div className="flex items-center gap-2 text-gray-700 font-semibold mb-2">
+                        <Briefcase className="w-4 h-4 text-[#155724]" />
+                        <span>{job.company}</span>
                       </div>
                     </div>
+                    <span className="px-4 py-1.5 bg-[#155724]/10 text-[#155724] text-xs font-bold rounded-full border border-[#155724]/30 whitespace-nowrap self-start">
+                      {job.type}
+                    </span>
+                  </div>
 
-                    <p className="text-gray-700 mb-4">{job.description}</p>
-
-                    <ul className="space-y-2 mb-4">
-                      {job.highlights.map((highlight, idx) => (
-                        <li key={idx} className="text-gray-600 text-sm flex items-start">
-                          <span className="text-[#155724] mr-2 mt-1">•</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      {job.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-gray-50 border border-[#155724]/30 text-[#155724] text-xs rounded-md font-mono"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  {/* Location and Period */}
+                  <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-1.5">
+                      <MapPin className="w-4 h-4 text-[#155724]" />
+                      <span>{job.location}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-4 h-4 text-[#155724]" />
+                      <span className="font-medium">{job.period}</span>
                     </div>
                   </div>
-                </div>
 
-                {/* Timeline Dot */}
-                <div className="hidden lg:block relative">
-                  <div className="w-6 h-6 bg-[#155724] rounded-full border-4 border-white shadow-lg shadow-[#155724]/50" />
-                  <div className="absolute inset-0 w-6 h-6 bg-[#155724] rounded-full animate-ping opacity-75" />
-                </div>
+                  {/* Description */}
+                  <p className="text-gray-700 leading-relaxed mb-5">{job.description}</p>
 
-                {/* Spacer for alternating layout */}
-                <div className="flex-1 hidden lg:block" />
+                  {/* Highlights */}
+                  <ul className="space-y-2.5 mb-6">
+                    {job.highlights.map((highlight, idx) => (
+                      <li key={idx} className="text-gray-700 text-sm flex items-start leading-relaxed">
+                        <span className="text-[#155724] mr-2.5 mt-1 font-bold">▸</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                    {job.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 bg-gray-50 border border-[#155724]/30 text-[#155724] text-xs rounded-lg font-medium hover:bg-[#155724]/5 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
