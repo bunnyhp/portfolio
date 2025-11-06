@@ -31,11 +31,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+    <section id="about" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle, #00ff41 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #155724 1px, transparent 1px)`,
           backgroundSize: '30px 30px'
         }} />
       </div>
@@ -48,10 +48,10 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            About <span className="text-[#00ff41]">Me</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            About <span className="text-[#155724]">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-[#00ff41] mx-auto" />
+          <div className="w-20 h-1 bg-[#155724] mx-auto" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -63,31 +63,31 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <div className="prose prose-invert">
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed">
                 {personalInfo.bio}
               </p>
             </div>
 
-            <div className="bg-gray-900/50 border border-[#00ff41]/20 rounded-lg p-6 backdrop-blur-sm">
-              <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                <Terminal className="w-5 h-5 text-[#00ff41] mr-2" />
+            <div className="bg-gray-50 border border-[#155724]/30 rounded-lg p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                <Terminal className="w-5 h-5 text-[#155724] mr-2" />
                 What I Do
               </h3>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#00ff41] mr-2">&gt;</span>
+                  <span className="text-[#155724] mr-2">&gt;</span>
                   <span>Design and implement comprehensive security architectures for cloud and on-premise infrastructure</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#00ff41] mr-2">&gt;</span>
+                  <span className="text-[#155724] mr-2">&gt;</span>
                   <span>Conduct threat modeling, vulnerability assessments, and penetration testing</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#00ff41] mr-2">&gt;</span>
+                  <span className="text-[#155724] mr-2">&gt;</span>
                   <span>Develop secure CI/CD pipelines and automate security operations</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#00ff41] mr-2">&gt;</span>
+                  <span className="text-[#155724] mr-2">&gt;</span>
                   <span>Ensure compliance with industry standards and best practices</span>
                 </li>
               </ul>
@@ -107,11 +107,11 @@ export default function AboutSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="bg-gray-900/50 border border-[#00ff41]/20 rounded-lg p-6 hover:border-[#00ff41]/50 transition-all hover:shadow-lg hover:shadow-[#00ff41]/10 group"
+                className="bg-white border border-[#155724]/30 rounded-lg p-6 hover:border-[#155724]/50 transition-all hover:shadow-lg hover:shadow-[#155724]/10 group shadow-sm"
               >
-                <feature.icon className="w-10 h-10 text-[#00ff41] mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <feature.icon className="w-10 h-10 text-[#155724] mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-gray-900 font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
