@@ -32,7 +32,7 @@ export default function ContactSection() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '8e8d42f9-3c7d-4d2e-9f1b-2e9c8d7f3a4b', // Web3Forms access key
+          access_key: '9528b9d2-0cca-4fc0-a370-365c954510c8', // Web3Forms access key
           email: 'mail2harshilppatel@gmail.com', // Your email
           subject: `Portfolio Contact: ${formData.subject}`,
           from_name: formData.name,
