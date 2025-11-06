@@ -4,10 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { personalInfo } from '../mockData';
 import { useToast } from '../hooks/use-toast';
-import axios from 'axios';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 export default function ContactSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -29,20 +25,40 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post(`${API}/contact`, formData);
-      
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-        duration: 5000,
+      // Using Web3Forms API
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '8e8d42f9-3c7d-4d2e-9f1b-2e9c8d7f3a4b', // Web3Forms access key
+          email: 'mail2harshilppatel@gmail.com', // Your email
+          subject: `Portfolio Contact: ${formData.subject}`,
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        }),
       });
-      
-      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+          duration: 5000,
+        });
+        
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(data.message || 'Failed to send message');
+      }
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
         title: "Error",
-        description: error.response?.data?.detail || "Failed to send message. Please try again.",
+        description: error.message || "Failed to send message. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
