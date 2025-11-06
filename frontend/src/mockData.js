@@ -193,7 +193,8 @@ export const projects = [
     category: "Research",
     spotlight: true,
     description: "University of Toledo project - Built custom firewall & intrusion detection system for IoT devices, automated vulnerability scanning, and integrated MQTT security protocols.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://raw.githubusercontent.com/bunnyhp/netguard-pro/main/docs/screenshots/dashboard-main.png",
+    link: "https://github.com/bunnyhp/netguard-pro/tree/main",
     tech: ["Raspberry Pi", "IoT Security", "Firewall", "IDS", "MQTT", "Network Segmentation", "Python"],
     year: "2023-2024",
     details: [
