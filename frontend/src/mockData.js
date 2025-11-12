@@ -365,6 +365,7 @@ export const projects = [
     id: 14,
     title: "AI-Driven ID Scanning System - Bedford Inn",
     category: "Enterprise Security",
+    link: "https://github.com/bunnyhp/id-scanner",
     description: "Developed AI-driven ID scanning system for Bedford Inn (USA) with blacklist verification and secured hotel network infrastructure.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     tech: ["AI/ML", "ID Scanning", "Blacklist Verification", "Network Security", "Python"],
@@ -415,8 +416,9 @@ export const projects = [
     id: 17,
     title: "Secure File Storage System with Encryption",
     category: "Enterprise Security",
+    link: "https://github.com/bunnyhp/encryption",
     description: "Developed secure file storage system with encryption capabilities, ensuring data confidentiality and integrity for sensitive information.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
     tech: ["File Encryption", "Secure Storage", "Data Protection", "Cryptography", "Python"],
     year: "2022-2023",
     details: [
@@ -433,7 +435,8 @@ export const projects = [
     title: "Automated Vulnerability Scanner with Python",
     category: "DevSecOps",
     description: "Developed automated vulnerability scanner using Python, streamlining vulnerability detection and reporting processes.",
-    image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+    link: "https://github.com/bunnyhp/Vulnerability-Scanner",
     tech: ["Python", "Vulnerability Scanning", "Automation", "Security Tools", "Nessus API"],
     year: "2023-2024",
     details: [
@@ -475,7 +478,7 @@ export const certifications = [
   { name: "Web Development Security Basics", issuer: "Security Training", year: "Completed", description: "HTTPS, firewall configs, secure web app structure" },
   { name: "Graphic Design Bootcamp (PS, IL, AE)", issuer: "Design Training", year: "Completed", description: "Useful for phishing awareness training and visual reporting" },
   { name: "Ethical Hacking – Most Advanced Level Penetration Testing", issuer: "Security Training", year: "Completed", description: "Red-team tactics & exploit development" },
-  { name: "CompTIA Security+", issuer: "CompTIA", year: "Scheduled Jul 2025", description: "Core security architecture & operations" },
+  { name: "CompTIA Security+", issuer: "CompTIA", year: "Scheduled Jul 2026", description: "Core security architecture & operations" },
   { name: "Google Professional Cloud Security Engineer", issuer: "Google", year: "Completed", description: "GCP identity, access, logging, compliance" },
   { name: "OSINT Fundamentals / CTIA", issuer: "Security Training", year: "Completed", description: "Threat-intelligence pipeline & feed triage" }
 ];

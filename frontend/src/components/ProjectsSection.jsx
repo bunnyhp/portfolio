@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, Star, Globe, Link2 } from 'lucide-react';
+import { ExternalLink, Github, Star, Globe } from 'lucide-react';
 import { projects } from '../mockData';
 
 export default function ProjectsSection() {
@@ -78,41 +78,38 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group bg-white rounded-xl overflow-hidden border border-[#155724]/20 hover:border-[#155724]/40 transition-all hover:shadow-2xl hover:shadow-[#155724]/15 shadow-md hover:-translate-y-1 duration-300"
             >
-              {/* Project Link Display */}
-              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-[#155724] via-[#0d3e1a] to-[#155724] flex items-center justify-center group/link">
-                {project.link ? (
+              {/* Project Image with Link Overlay */}
+              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 group/image">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                
+                {/* Link Overlay - Shows on Hover */}
+                {project.link && (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full h-full flex flex-col items-center justify-center p-6 text-center hover:bg-gradient-to-br hover:from-[#28a745] hover:via-[#155724] hover:to-[#28a745] transition-all duration-300"
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-[#155724]/90 opacity-0 group-hover/image:opacity-100 transition-all duration-300 z-10"
                   >
-                    <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 mb-4 group-hover/link:bg-white/20 transition-all">
-                      <Globe className="w-12 h-12 text-white" />
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 mb-3">
+                      <Globe className="w-10 h-10 text-white" />
                     </div>
-                    <div className="text-white">
-                      <p className="text-xs font-semibold uppercase tracking-wider mb-2 opacity-90">View Project</p>
-                      <p className="text-sm font-mono break-all px-4 line-clamp-2 group-hover/link:text-[#a8e6cf] transition-colors">
-                        {formatUrl(project.link)}
-                      </p>
-                    </div>
-                    <ExternalLink className="w-5 h-5 text-white mt-3 opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
+                    <p className="text-xs font-semibold uppercase tracking-wider text-white mb-2">View Project</p>
+                    <p className="text-xs font-mono text-white/90 px-4 text-center line-clamp-2 max-w-[90%]">
+                      {formatUrl(project.link)}
+                    </p>
+                    <ExternalLink className="w-4 h-4 text-white mt-2" />
                   </a>
-                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 mb-4">
-                      <Link2 className="w-12 h-12 text-white/70" />
-                    </div>
-                    <div className="text-white/70">
-                      <p className="text-xs font-semibold uppercase tracking-wider mb-2">No Link Available</p>
-                    </div>
-                  </div>
                 )}
                 
                 {/* Badges Container */}
-                <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
+                <div className="absolute top-4 left-4 right-4 flex items-start justify-between z-20">
                   {/* Category Badge */}
-                  <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg border border-white/30">
+                  <span className="bg-[#155724] text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg">
                     {project.category}
                   </span>
                   
@@ -126,8 +123,8 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Year Badge */}
-                <div className="absolute bottom-4 right-4">
-                  <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-mono font-semibold border border-white/30">
+                <div className="absolute bottom-4 right-4 z-20">
+                  <span className="bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">
                     {project.year}
                   </span>
                 </div>
