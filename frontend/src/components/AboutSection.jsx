@@ -124,7 +124,7 @@ export default function AboutSection() {
               <Shield className="w-7 h-7 text-[#155724]" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Security Engineer & Educator</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Security Engineer</h3>
               <p className="text-gray-600 leading-relaxed">
                 A highly driven and accomplished Security Engineer with extensive hands-on experience in <span className="text-[#155724] font-semibold">SIEM analysis</span>, <span className="text-[#155724] font-semibold">incident response</span>, and <span className="text-[#155724] font-semibold">threat hunting</span>.
               </p>

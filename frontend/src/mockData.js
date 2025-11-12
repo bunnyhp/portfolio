@@ -261,6 +261,7 @@ export const projects = [
     id: 7,
     title: "Password Strength Checker with Data Breach Detection",
     category: "Web Security",
+    link: "https://github.com/bunnyhp/password-strength-checker",
     description: "Developed password strength checker with data breach detection capabilities, checking passwords against known breach databases and providing security recommendations.",
     image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&q=80",
     tech: ["Password Security", "Data Breach Detection", "Have I Been Pwned API", "Python", "Web Security"],
@@ -277,6 +278,7 @@ export const projects = [
     id: 8,
     title: "Automate Threat Intelligence with Custom SIEM",
     category: "DevSecOps",
+    link:"https://github.com/bunnyhp/enterprise-soc-blueprint",
     description: "Developed custom SIEM solution for automated threat intelligence collection, IOC import, and threat hunting, streamlining security operations.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     tech: ["SIEM", "Threat Intelligence", "IOC Analysis", "Automation", "Python", "Threat Hunting"],
@@ -293,6 +295,7 @@ export const projects = [
     id: 9,
     title: "Robotic Automation with PLC - Modtech",
     category: "DevSecOps",
+    link: "http://www.modtechworld.com/#",
     description: "Integrated robotics with PLC controllers at Modtech, implemented secure network segmentation, and ensured operational technology security for industrial automation.",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
     tech: ["PLC", "Robotics", "Network Segmentation", "OT Security", "Industrial Automation", "ASP.NET"],
@@ -305,26 +308,12 @@ export const projects = [
       "Protected critical automation infrastructure"
     ]
   },
-  {
-    id: 10,
-    title: "SAP Implementation with Cybersecurity Controls",
-    category: "Enterprise Security",
-    description: "SAP Business One implementation for two companies with server hardening, secure deployment, and comprehensive cybersecurity controls for enterprise resource planning.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    tech: ["SAP Business One", "Server Hardening", "Access Control", "Encryption", "Enterprise Security", "RBAC"],
-    year: "2022-2023",
-    details: [
-      "Implemented SAP Business One for two companies",
-      "Performed server hardening and secure configuration",
-      "Implemented access control and encryption",
-      "Applied comprehensive cybersecurity controls",
-      "Ensured secure enterprise resource planning"
-    ]
-  },
+
   {
     id: 11,
     title: "AWS Hosting for Nirma University App",
     category: "Cloud Security",
+    link: "https://nirmauni.ac.in",
     description: "Migrated Nirma University application to AWS with IAM policies, encryption, and secure cloud architecture, ensuring high availability and security.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
     tech: ["AWS", "IAM", "Encryption", "Cloud Migration", "VPC", "Security Groups"],
@@ -341,6 +330,7 @@ export const projects = [
     id: 12,
     title: "Server Configuration & Deployment - Dell PowerEdge",
     category: "Infrastructure Security",
+    link: "https://www.dell.com/support/kbdoc/en-us/000123958/dell-poweredge-server-start-up-guide",
     description: "Server configuration and deployment for two companies using Dell PowerEdge servers, RDP via Proxmox, and RBAC security implementation.",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
     tech: ["Dell PowerEdge", "Proxmox", "RDP", "RBAC", "Server Management", "Virtualization"],
@@ -357,6 +347,7 @@ export const projects = [
     id: 13,
     title: "ERPBotHub Website Development",
     category: "Web Security",
+    link: "https://www.erpbothub.com",
     description: "Built and secured ERPBotHub corporate website with modern security practices, secure hosting, and comprehensive web security implementation.",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
     tech: ["Web Development", "SSL/TLS", "WAF", "Security Headers", "Web Security"],
@@ -368,7 +359,7 @@ export const projects = [
       "Applied secure hosting and deployment practices",
       "Ensured website security and performance"
     ],
-    liveUrl: "https://www.erpbothub.com"
+    
   },
   {
     id: 14,
@@ -390,6 +381,7 @@ export const projects = [
     id: 15,
     title: "Network Configuration - Bedford Inn, Michigan",
     category: "Infrastructure Security",
+    link: "https://www.bedfordsuite.com/",
     description: "Designed and implemented router & switch configurations for Bedford Inn, Michigan, securing web and guest network connectivity with proper segmentation.",
     image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?w=800&q=80",
     tech: ["Network Configuration", "Router Configuration", "Switch Configuration", "Network Segmentation", "Guest Network Security"],
@@ -406,6 +398,7 @@ export const projects = [
     id: 16,
     title: "Backend Automation - SynZeal Research",
     category: "Enterprise Security",
+    link: "https://www.synzeal.com/",
     description: "Developed backend automation for supply-chain system using .NET, database integration, and HPLC R&D support with security-focused implementation.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
     tech: [".NET", "Database Integration", "Supply Chain Systems", "Automation", "Backend Security"],
@@ -434,22 +427,7 @@ export const projects = [
       "Enhanced data security posture"
     ]
   },
-  {
-    id: 18,
-    title: "Vulnerability Assessment and Penetration Testing Lab",
-    category: "DevSecOps",
-    description: "Built and configured vulnerability assessment and penetration testing lab environment for hands-on security testing and research.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-    tech: ["Penetration Testing", "Vulnerability Assessment", "Security Testing", "Kali Linux", "Security Tools"],
-    year: "2023-2024",
-    details: [
-      "Built comprehensive penetration testing lab environment",
-      "Configured vulnerability assessment tools and platforms",
-      "Conducted hands-on security testing and research",
-      "Applied ethical hacking methodologies",
-      "Enhanced security testing capabilities"
-    ]
-  },
+ 
   {
     id: 19,
     title: "Automated Vulnerability Scanner with Python",
@@ -466,31 +444,16 @@ export const projects = [
       "Enhanced vulnerability management efficiency"
     ]
   },
-  {
-    id: 20,
-    title: "Cloud Security Monitoring Dashboard",
-    category: "Cloud Security",
-    description: "Developed cloud security monitoring dashboard providing real-time visibility into cloud security posture, threats, and compliance status.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    tech: ["Cloud Security", "Monitoring Dashboard", "AWS", "Security Analytics", "Python", "React"],
-    year: "2024",
-    details: [
-      "Built cloud security monitoring dashboard",
-      "Provided real-time visibility into security posture",
-      "Monitored threats and compliance status",
-      "Integrated with cloud security services",
-      "Enhanced cloud security operations"
-    ]
-  },
+ 
   {
     id: 21,
     title: "HomeLab Infrastructure",
     category: "Infrastructure Security",
+    link: "https://github.com/bunnyhp/HOmeLab",
     description: "Personal homelab setup demonstrating hands-on infrastructure management, server configuration, and security practices in a home environment.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
     tech: ["Homelab", "Server Management", "Infrastructure", "Linux", "Virtualization"],
     year: "Ongoing",
-    githubUrl: "https://github.com/bunnyhp/HOmeLab",
     details: [
       "Personal infrastructure setup for learning and experimentation",
       "Server configuration and management",
@@ -499,22 +462,7 @@ export const projects = [
       "Hands-on practice with security tools"
     ]
   },
-  {
-    id: 22,
-    title: "Certificates Portfolio",
-    category: "Academic",
-    description: "Comprehensive collection of professional certifications and achievements, showcasing expertise in cybersecurity, cloud computing, and various technical domains.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    tech: ["Certifications", "Portfolio", "Documentation"],
-    year: "Ongoing",
-    githubUrl: "https://github.com/bunnyhp/Certificates",
-    details: [
-      "Organized collection of professional certifications",
-      "Cybersecurity and cloud computing credentials",
-      "Technical and professional development achievements",
-      "Continuous learning and skill development"
-    ]
-  }
+  
 ];
 
 export const certifications = [
