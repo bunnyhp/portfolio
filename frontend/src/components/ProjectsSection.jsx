@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, Star } from 'lucide-react';
+import { ExternalLink, Github, Star, Globe, Link2 } from 'lucide-react';
 import { projects } from '../mockData';
 
 export default function ProjectsSection() {
@@ -10,6 +10,28 @@ export default function ProjectsSection() {
 
   const categories = ['All', 'Cloud Security', 'Enterprise Security', 'DevSecOps', 'Infrastructure Security', 'Web Security', 'Academic', 'Research', 'Competitions'];
   const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
+
+  // Function to extract domain from URL
+  const getDomainFromUrl = (url) => {
+    if (!url) return 'No Link Available';
+    try {
+      const urlObj = new URL(url);
+      return urlObj.hostname.replace('www.', '');
+    } catch {
+      return url;
+    }
+  };
+
+  // Function to format URL for display
+  const formatUrl = (url) => {
+    if (!url) return null;
+    try {
+      const urlObj = new URL(url);
+      return urlObj.hostname + urlObj.pathname;
+    } catch {
+      return url.length > 50 ? url.substring(0, 50) + '...' : url;
+    }
+  };
 
   return (
     <section id="projects" className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
@@ -56,19 +78,41 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group bg-white rounded-xl overflow-hidden border border-[#155724]/20 hover:border-[#155724]/40 transition-all hover:shadow-2xl hover:shadow-[#155724]/15 shadow-md hover:-translate-y-1 duration-300"
             >
-              {/* Project Image */}
-              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              {/* Project Link Display */}
+              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-[#155724] via-[#0d3e1a] to-[#155724] flex items-center justify-center group/link">
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full h-full flex flex-col items-center justify-center p-6 text-center hover:bg-gradient-to-br hover:from-[#28a745] hover:via-[#155724] hover:to-[#28a745] transition-all duration-300"
+                  >
+                    <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 mb-4 group-hover/link:bg-white/20 transition-all">
+                      <Globe className="w-12 h-12 text-white" />
+                    </div>
+                    <div className="text-white">
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-2 opacity-90">View Project</p>
+                      <p className="text-sm font-mono break-all px-4 line-clamp-2 group-hover/link:text-[#a8e6cf] transition-colors">
+                        {formatUrl(project.link)}
+                      </p>
+                    </div>
+                    <ExternalLink className="w-5 h-5 text-white mt-3 opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
+                  </a>
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 mb-4">
+                      <Link2 className="w-12 h-12 text-white/70" />
+                    </div>
+                    <div className="text-white/70">
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-2">No Link Available</p>
+                    </div>
+                  </div>
+                )}
                 
                 {/* Badges Container */}
                 <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
                   {/* Category Badge */}
-                  <span className="bg-[#155724] text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg">
+                  <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg border border-white/30">
                     {project.category}
                   </span>
                   
@@ -83,7 +127,7 @@ export default function ProjectsSection() {
 
                 {/* Year Badge */}
                 <div className="absolute bottom-4 right-4">
-                  <span className="bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">
+                  <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-mono font-semibold border border-white/30">
                     {project.year}
                   </span>
                 </div>
