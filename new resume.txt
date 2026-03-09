@@ -1,0 +1,488 @@
+Harshil P. Patel
+AI Security Architect | Cloud Security & DevSecOps Engineer
+ +1(312)-438-0016 mail2harshilppatel@gmail.com www.linkedin.com/in/harshil-patel-security-engineer portfolio.autoneties.com
+The Hague, ZH, Netherlands
+ PROFESSIONAL SUMMARY
+AI Security Architect with over eight years designing secure infrastructures for financial and enterprise environments. Architected scalable security
+frameworks across Azure and AWS, integrating SABSA methodologies to align technical controls with business objectives. Directed DevSecOps teams in
+securing data pipelines and ML models, reducing adversarial threat risks by implementing rigorous identity and API protection standards. Engineered
+automated compliance workflows that ensured adherence to NIST and financial regulations while accelerating deployment cycles. Expert in translating
+complex architectural requirements into execution, fostering a culture of security-by-design across agile engineering teams.
+ EXPERIENCE
+Lead AI Security Architect
+CRS Laboratory | Chicago, USA | 01/2024 – 10/2025 Link
+● Architected AI security standards for enterprise data pipelines, integrating adversarial defense mechanisms that secured model training workflows against
+complex manipulation and unauthorized inference attacks effectively.
+● Conducted proactive threat hunting with the MITRE ATT&CK framework, discovering and mitigating 5 previously undetected advanced threats, strengthening
+the organization’s detection and response capabilities.
+● Built automated SQL/Python workflows and security dashboards, improving data accuracy and reducing manual reporting time by 40%, while providing
+executive leadership with real-time visibility into risk metrics, compliance posture, and overall security operations.
+● Performed vulnerability assessments on lab systems using Python-based scanners and CVE databases, delivering remediation recommendations that reduced
+exploitable risks by 30% and supported compliance with NIST and HIPAA security guidelines.
+● Directed security architecture reviews for cloud-native applications, advising leadership on risk acceptance while enforcing SABSA-aligned controls to protect
+customer data integrity and business privacy.
+● Embedded security-by-design principles into Agile DevOps cycles, automating policy enforcement within CI/CD pipelines to block non-compliant code before
+final production deployment releases.
+Cloud Security Engineer
+ERPBotHub Pvt. Ltd | Ahmedabad, India | 04/2022 - 08/2023 Link
+● Engineered resilient AWS security architectures using Well-Architected Framework pillars, establishing identity boundaries and encryption standards that
+safeguarded critical financial business applications and services.
+● Deployed cloud security controls for AWS environments including GuardDuty, CloudTrail, and IAM policies, protecting critical business applications and
+achieving 100% compliance with security baselines.
+● Implemented vulnerability management program using Nessus and custom Python automation, identifying and remediating 23 critical vulnerabilities before
+exploitation across servers, endpoints, and network devices.
+● Configured and managed security tools including Palo Alto firewalls, Splunk SIEM, and CrowdStrike EDR, correlating events across endpoints to detect
+advanced persistent threats.
+● Developed incident response procedures aligned with NIST 800-61, reducing mean time to respond (MTTR) from 4 hours to 45 minutes through automated
+playbooks and orchestration.
+● Established automated compliance monitoring using AWS Config and Security Hub, ensuring continuous alignment with financial regulatory requirements and
+reducing audit preparation overhead tasks.
+● Configured API security controls and gateway protections for microservices, mitigating unauthorized access risks and ensuring secure data exchange across
+complex hybrid cloud environments.
+ Network Security Analyst
+SynZeal Research Pvt. Ltd | Ahmedabad, India | 06/2020 - 03/2022 Link
+● Administered network security baselines and firewall configurations, enforcing strict access control lists to minimize the attack surface across research
+laboratory infrastructure assets.
+● Managed endpoint security using antivirus, host-based firewalls, and security baselines, maintaining best protection against malware and unauthorized
+access.
+● Executed routine vulnerability assessments and patch management cycles, rapidly addressing critical CVEs to maintain system integrity and prevent potential
+malware exploitation risks.
+● Analyzed security logs and alerts to identify potential intrusions, initiating rapid containment protocols that preserved data availability and minimized
+operational downtime impacts.
+LEADERSHIP & INVOLVEMENT
+● IT Help desk specialist in GAP - Modernized NGO's tech stack, enhancing cybersecurity posture and training 8 staff in cybersecurity hygiene. Provided IT help
+desk support to 200+ HIV-positive patients for over 4 years and that was my full time IT Help Desk Technician experience.
+● Team Captain, U.S. DOE CyberForce Competition - Led a six-member blue team; scored 5,308 points and finished in the top quartile nationwide.
+● Coach, Toledo Transition Program - Mentored cybersecurity undergrads with workshops on Raspberry Pi hardening, SIEM rule-tuning, and OWASP IoT Top 10.
+● Volunteer Network Administrator, Bedford Inn - Managed wired and wireless hotel networks for 1 year, improving uptime and securing guest/staff Wi-Fi via
+VLANs, access controls, and regular patching with make one AI based ID Scanner.
+● Startup Founder & Team Lead, Oasis Marketing - Built and coordinated a 34-person team, organizing weekly events that boosted revenue and brand reach.
+PROJECTS
+ Enterprise Security Operations Center (SOC) Implementation | Open Source Project- github Link
+● Designed and deployed enterprise SOC using Splunk Enterprise, integrating logs from 100+ sources including firewalls, endpoints, and cloud services.
+● Developed custom detection rules based on MITRE ATT&CK tactics, achieving 95% threat detection rate in simulated attacks.
+● Created automated incident response workflows using SOAR, reducing incident resolution time by 60%.
+● Implemented threat intelligence feeds from OSINT sources, enriching security events with contextual information.
+ Cloud Security Architecture & Migration | ERPBotHub Link
+● Architected secure AWS environment implementing Well-Architected Framework security pillar, including VPC design, security groups, and IAM policies.
+● Deployed cloud-native security tools including AWS GuardDuty, Security Hub, and Config for continuous compliance monitoring.
+● Implemented data encryption at rest and in transit using KMS and TLS, protecting sensitive business data.
+● Created disaster recovery plan with RTO of 4 hours and RPO of 1 hour, ensuring business continuity.
+ Zero Trust Network Implementation | Personal Lab Link
+● Built zero trust architecture using software-defined perimeter, micro-segmentation, and continuous verification.
+● Implemented certificate-based authentication using PKI infrastructure for all network resources.
+● Deployed network access control (NAC) solution enforcing device compliance before network access.
+ Secure Network Infrastructure Deployment (Volunteer Project) | Bedford Inn, Michigan, USA Link
+● Designed and deployed a secure hotel network with routers, switches, VLAN segmentation, firewall rules, VPN access, and IDS alerts.
+● Integrated AI-based ID verification at check-in, blocking flagged profiles and preventing unauthorized customers from check in.
+● Delivered a scalable, compliant, and audit-ready infrastructure that improved uptime and guest trust.
+ IoT Security Gateway & Threat Detection Platform | Personal Research Lab Link
+● Built a Raspberry Pi–based IoT gateway with Snort IDS, MQTT hardening, TLS encryption, and NAC enforcement.
+● Automated vulnerability scanning and log correlation with Python, detecting anomalies and containing lateral movement.
+● Developed ML-based anomaly detection pipeline, achieving >90% accuracy in identifying malicious IoT behavior.
+ Advanced Threat Hunting Platform | University of Toledo Link
+● Developed Python-based threat hunting tools integrating multiple threat intelligence feeds to identify IOCs across enterprise infrastructure.
+● Created machine learning models for anomaly detection, achieving 92% accuracy in identifying malicious behavior.
+● Built automated response capabilities for common attack patterns, preventing lateral movement and data exfiltration.
+CERTIFICATIONS
+● SANS NetWars Core Certificate - Hands-on threat detection & incident-response labs.
+● Google Cybersecurity Professional Certificate - Network security, SIEM, incident response fundamentals.
+● Career Essentials in Cybersecurity by Microsoft and LinkedIn - Microsoft Security Copilot, Microsoft Entra, Defender, and Sentinel.
+● AWS Certified Cloud Practitioner - IAM, GuardDuty, CloudTrail, shared-responsibility model.
+● TryHackMe Red Teaming Lab path- execute adversary attack emulations as a Red Team Operator.
+● Linux Essentials - System hardening & log analysis.
+● Python for Cybersecurity - Automation & SOC playbooks.
+● SQL & PHP Secure Development - Securing backend services, validating input, controlling access.
+● Web Development Security Basics - HTTPS, firewall configs, secure web app structure.
+● Ethical Hacking Most Advanced Level Penetration Testing - Red-team tactics & exploit development.
+● CompTIA Security+ - Core security architecture & operations.
+● Google Professional Cloud Security Engineer - GCP identity, access, logging, compliance.
+● OSINT Fundamentals / CTIA - Threat-intelligence pipeline & feed triage.
+TECHNICAL SKILLS
+• AI SECURITY & ML: Adversarial Defense, Model Hardening, Data Privacy, LLM Security, Inference Protection, Algorithm Auditing, Bias Detection
+• CLOUD ARCHITECTURE: AWS (GuardDuty), Azure (Sentinel), IAM, VPC Design, Security Hub, KMS Encryption, Landing Zones
+• SECURITY FRAMEWORKS: SABSA, NIST 800-53, ISO 27001, MITRE ATT&CK, CIS Benchmarks, GDPR Compliance, OWASP Top 10
+• DEVSECOPS & CI/CD: Jenkins, GitLab CI, Docker Security, Kubernetes (K8s), Terraform, Ansible, Git
+• IDENTITY & ACCESS: OAuth 2.0, OIDC, SAML, Active Directory, Azure AD, MFA Implementation, RBAC
+• THREAT MANAGEMENT: Splunk ES, CrowdStrike Falcon, Threat Hunting, IOC Analysis, TTP Profiling, Anomaly Detection, Incident Response
+• NETWORK SECURITY: Palo Alto Firewalls, VPN, IDS/IPS (Snort), Micro-segmentation, Zero Trust, TCP/IP, DNS Security
+• PROGRAMMING & SCRIPTING: Python, SQL, Bash, PowerShell, JSON, YAML, Regular Expressions
+• VULNERABILITY MANAGEMENT: Nessus, Qualys, Remediation Prioritization, CVE Analysis, Patch Management, Risk Assessment, Penetration Testing
+• DATA PROTECTION: DLP, TLS/SSL, Database Security, Encryption at Rest, Key Management, Data Classification, Integrity Monitoring
+EDUCATION
+● Master of Science in Cybersecurity - University of Toledo, Toledo, OH
+Expected 2025 · GPA 3.9/4.0.
+Capstone: “Founder of Autoneties. -AI-powered network security for smart homes.”. Link
+● Bachelor of Science - Gujarat Technological University, Gandhinagar, India
+Graduated 2021 · CGPA 7.56/10
+Capstone: “Evolution of Clinical Trials” - 3rd place, state-level pitch competition.
+Published an article: Comprehensive Review on Edible Vaccine. J. Drug Delivery Ther. Link
+
+
+Harshil P. Patel
+Senior Site Reliability Engineer | Environment Automation Specialist
+ +1(312)-438-0016 mail2harshilppatel@gmail.com www.linkedin.com/in/harshil-patel-security-engineer portfolio.autoneties.com
+Austin, TX, USA
+ PROFESSIONAL SUMMARY
+Senior Site Reliability Engineer with over eight years of experience designing secure multi-tenant infrastructure and automating cloud environments. Built
+infrastructure-as-code pipelines using Terraform and Ansible to provision isolated environments across AWS and GCP ecosystems. Managed production
+Kubernetes clusters by resolving scheduling conflicts and optimizing pod configurations to maintain continuous service availability. Developed custom
+automation scripts in Python and Go to replace manual provisioning workflows and reduce deployment times by several hours. Integrated Prometheus and
+Grafana with existing Splunk SIEM deployments to enhance observability and detect bottlenecks across distributed systems. Led incident response efforts
+for complex microservices architectures, reducing mean time to respond from four hours to forty-five minutes. Secured cloud-native platforms by enforcing
+IAM policies and deploying Helm Charts to ensure compliance across hundreds of tenant environments.
+ EXPERIENCE
+Senior Site Reliability Engineer
+CRS Laboratory | Chicago, USA | 01/2024 – 10/2025 Link
+● Built comprehensive observability systems integrating Prometheus and Grafana to detect capacity bottlenecks and predict usage trends across hundreds of
+isolated environments and production workloads.
+● Conducted proactive threat hunting with the MITRE ATT&CK framework, discovering and mitigating 5 previously undetected advanced threats, strengthening
+the organization’s detection and response capabilities.
+● Built automated SQL/Python workflows and security dashboards, improving data accuracy and reducing manual reporting time by 40%, while providing
+executive leadership with real-time visibility into risk metrics, compliance posture, and overall security operations.
+● Performed vulnerability assessments on lab systems using Python-based scanners and CVE databases, delivering remediation recommendations that reduced
+exploitable risks by 30% and supported compliance with NIST and HIPAA security guidelines.
+● Designed infrastructure as code workflows using Terraform and Ansible to provision isolated multi-tenant environments across cloud platforms while
+maintaining complex state strategies and workspace configurations.
+● Resolved production issues within Kubernetes clusters by diagnosing crash loops and scheduling conflicts to ensure continuous service availability across
+distributed microservices and cloud native applications.
+Site Reliability Engineer
+ERPBotHub Pvt. Ltd | Ahmedabad, India | 04/2022 - 08/2023 Link
+● Created and maintained deployment packages including Helm Charts to support automated version upgrades and configuration rollouts for enterprise
+applications within secure cloud provider ecosystems.
+● Deployed cloud security controls for AWS environments including GuardDuty, CloudTrail, and IAM policies, protecting critical business applications and
+achieving 100% compliance with security baselines.
+● Implemented vulnerability management program using Nessus and custom Python automation, identifying and remediating 23 critical vulnerabilities before
+exploitation across servers, endpoints, and network devices.
+● Configured and managed security tools including Palo Alto firewalls, Splunk SIEM, and CrowdStrike EDR, correlating events across endpoints to detect
+advanced persistent threats.
+● Developed incident response procedures aligned with NIST 800-61, reducing mean time to respond (MTTR) from 4 hours to 45 minutes through automated
+playbooks and orchestration.
+● Directed incident response efforts for critical deployment failures by conducting detailed postmortem analyses and establishing operational standards that
+reduced future risks across the platform.
+● Analyzed and debugged infrastructure tooling written in Go and Ruby to identify performance bottlenecks and improve the reliability of automated
+provisioning pipelines and deployment rollouts.
+ Cloud Security Engineer
+SynZeal Research Pvt. Ltd | Ahmedabad, India | 06/2020 - 03/2022 Link
+● Developed reusable infrastructure code using templating tools like Jsonnet to standardize environment configurations and eliminate manual operations
+across the entire lifecycle of customer deployments.
+● Managed endpoint security using antivirus, host-based firewalls, and security baselines, maintaining best protection against malware and unauthorized
+access.
+● Managed containerized applications by configuring ReplicaSets and pod interactions to maintain high availability and fault tolerance during routine
+maintenance tasks and automated version upgrades.
+● Enforced cloud security baselines across automated infrastructure by integrating continuous compliance monitoring tools and identity management policies
+within complex deployment pipelines and production environments.
+LEADERSHIP & INVOLVEMENT
+● IT Help desk specialist in GAP - Modernized NGO's tech stack, enhancing cybersecurity posture and training 8 staff in cybersecurity hygiene. Provided IT help
+desk support to 200+ HIV-positive patients for over 4 years and that was my full time IT Help Desk Technician experience.
+● Team Captain, U.S. DOE CyberForce Competition - Led a six-member blue team; scored 5,308 points and finished in the top quartile nationwide.
+● Coach, Toledo Transition Program - Mentored cybersecurity undergrads with workshops on Raspberry Pi hardening, SIEM rule-tuning, and OWASP IoT Top 10.
+● Volunteer Network Administrator, Bedford Inn - Managed wired and wireless hotel networks for 1 year, improving uptime and securing guest/staff Wi-Fi via
+VLANs, access controls, and regular patching with make one AI based ID Scanner.
+● Startup Founder & Team Lead, Oasis Marketing - Built and coordinated a 34-person team, organizing weekly events that boosted revenue and brand reach.
+PROJECTS
+ Enterprise Security Operations Center (SOC) Implementation | Open Source Project- github Link
+● Designed and deployed enterprise SOC using Splunk Enterprise, integrating logs from 100+ sources including firewalls, endpoints, and cloud services.
+● Developed custom detection rules based on MITRE ATT&CK tactics, achieving 95% threat detection rate in simulated attacks.
+● Created automated incident response workflows using SOAR, reducing incident resolution time by 60%.
+● Implemented threat intelligence feeds from OSINT sources, enriching security events with contextual information.
+ Cloud Security Architecture & Migration | ERPBotHub Link
+● Architected secure AWS environment implementing Well-Architected Framework security pillar, including VPC design, security groups, and IAM policies.
+● Deployed cloud-native security tools including AWS GuardDuty, Security Hub, and Config for continuous compliance monitoring.
+● Implemented data encryption at rest and in transit using KMS and TLS, protecting sensitive business data.
+● Created disaster recovery plan with RTO of 4 hours and RPO of 1 hour, ensuring business continuity.
+ Zero Trust Network Implementation | Personal Lab Link
+● Built zero trust architecture using software-defined perimeter, micro-segmentation, and continuous verification.
+● Implemented certificate-based authentication using PKI infrastructure for all network resources.
+● Deployed network access control (NAC) solution enforcing device compliance before network access.
+ Secure Network Infrastructure Deployment (Volunteer Project) | Bedford Inn, Michigan, USA Link
+● Designed and deployed a secure hotel network with routers, switches, VLAN segmentation, firewall rules, VPN access, and IDS alerts.
+● Integrated AI-based ID verification at check-in, blocking flagged profiles and preventing unauthorized customers from check in.
+● Delivered a scalable, compliant, and audit-ready infrastructure that improved uptime and guest trust.
+ IoT Security Gateway & Threat Detection Platform | Personal Research Lab Link
+● Built a Raspberry Pi–based IoT gateway with Snort IDS, MQTT hardening, TLS encryption, and NAC enforcement.
+● Automated vulnerability scanning and log correlation with Python, detecting anomalies and containing lateral movement.
+● Developed ML-based anomaly detection pipeline, achieving >90% accuracy in identifying malicious IoT behavior.
+ Advanced Threat Hunting Platform | University of Toledo Link
+● Developed Python-based threat hunting tools integrating multiple threat intelligence feeds to identify IOCs across enterprise infrastructure.
+● Created machine learning models for anomaly detection, achieving 92% accuracy in identifying malicious behavior.
+● Built automated response capabilities for common attack patterns, preventing lateral movement and data exfiltration.
+CERTIFICATIONS
+● SANS NetWars Core Certificate - Hands-on threat detection & incident-response labs.
+● Google Cybersecurity Professional Certificate - Network security, SIEM, incident response fundamentals.
+● Career Essentials in Cybersecurity by Microsoft and LinkedIn - Microsoft Security Copilot, Microsoft Entra, Defender, and Sentinel.
+● AWS Certified Cloud Practitioner - IAM, GuardDuty, CloudTrail, shared-responsibility model.
+● TryHackMe Red Teaming Lab path- execute adversary attack emulations as a Red Team Operator.
+● Linux Essentials - System hardening & log analysis.
+● Python for Cybersecurity - Automation & SOC playbooks.
+● SQL & PHP Secure Development - Securing backend services, validating input, controlling access.
+● Web Development Security Basics - HTTPS, firewall configs, secure web app structure.
+● Ethical Hacking Most Advanced Level Penetration Testing - Red-team tactics & exploit development.
+● CompTIA Security+ - Core security architecture & operations.
+● Google Professional Cloud Security Engineer - GCP identity, access, logging, compliance.
+● OSINT Fundamentals / CTIA - Threat-intelligence pipeline & feed triage.
+TECHNICAL SKILLS
+• CLOUD PLATFORMS: Amazon Web Services, Google Cloud Platform, Virtual Private Cloud, IAM Policies, CloudTrail, AWS KMS
+• INFRASTRUCTURE AS CODE: Terraform, Ansible, Jsonnet, Helm Charts, CloudFormation, Automation Pipeline, Workspace Management
+• CONTAINER ORCHESTRATION: Kubernetes, Docker, Microservices, ReplicaSets, Pod Configurations, Cluster Management, Kubelet
+• OBSERVABILITY TOOLS: Prometheus, Grafana, Splunk SIEM, Elasticsearch, Logstash, Kibana, Continuous System Monitoring
+• PROGRAMMING LANGUAGES: Python Development, Go Programming, Ruby Scripts, SQL Queries, PHP Backend, Bash Scripting, Jsonnet
+• SECURITY OPERATIONS: CrowdStrike EDR, Palo Alto Firewalls, Nessus Scanners, Snort IDS, Security Hub, Threat Hunting, OSINT
+• INCIDENT RESPONSE: Disaster Recovery, Postmortem Analysis, Playbook Automation, Alert Triage, Root Cause Analysis, SOAR, Log
+• DEVSECOPS PIPELINES: GitLab Dedicated, Continuous Integration, Continuous Deployment, Version Upgrades, Rollout, Git, Omnibus
+• NETWORK ARCHITECTURE: Software Defined Perimeter, Micro Segmentation, TLS Encryption, Network Access Control, VLAN, VPN, MQTT
+• COMPLIANCE FRAMEWORKS: Well Architected Framework, NIST Guidelines, HIPAA Standards, Zero Trust Architecture, PKI, CVE, IAM
+EDUCATION
+● Master of Science in Cybersecurity - University of Toledo, Toledo, OH
+Expected 2025 · GPA 3.9/4.0.
+Capstone: “Founder of Autoneties. -AI-powered network security for smart homes.”. Link
+● Bachelor of Science - Gujarat Technological University, Gandhinagar, India
+Graduated 2021 · CGPA 7.56/10
+Capstone: “Evolution of Clinical Trials” - 3rd place, state-level pitch competition.
+Published an article: Comprehensive Review on Edible Vaccine. J. Drug Delivery Ther. Link
+
+Harshil P. Patel
+Senior Multi-Cloud Cybersecurity Architect | Azure & AWS Security Specialist
+ +1(312)-438-0016 mail2harshilppatel@gmail.com www.linkedin.com/in/harshil-patel-security-engineer portfolio.autoneties.com
+Dallas, TX, USA
+ PROFESSIONAL SUMMARY
+Senior Multi-Cloud Cybersecurity Architect with 8+ years designing secure infrastructure across Azure, AWS, and GCP environments. Directed enterprise
+security strategies that reduced attack surface by 40% through rigorous implementation of NIST and CIS benchmarks. Engineered automated threat
+detection pipelines using Splunk and Python, cutting incident response times from hours to minutes while ensuring high availability. Architected
+cloud-native guardrails and IAM policies that enforced zero-trust principles for distributed hybrid networks. Expert in deploying WAF, firewall rules, and
+container security controls within CI/CD pipelines to embed security into the development lifecycle. Focused on bridging the gap between DevOps and
+security teams to drive rapid, compliant application delivery. Committed to mentoring engineering teams on secure architecture patterns and emerging
+cloud threats.
+ EXPERIENCE
+Lead Cloud Security Architect
+CRS Laboratory | Chicago, USA | 01/2024 – 10/2025 Link
+● Architected multi-cloud security patterns for Azure and AWS environments, establishing organization-wide guardrails that ensured adherence to CIS
+benchmarks and regulatory compliance standards.
+● Conducted proactive threat hunting with the MITRE ATT&CK framework, discovering and mitigating 5 previously undetected advanced threats, strengthening
+the organization’s detection and response capabilities.
+● Built automated SQL/Python workflows and security dashboards, improving data accuracy and reducing manual reporting time by 40%, while providing
+executive leadership with real-time visibility into risk metrics, compliance posture, and overall security operations.
+● Performed vulnerability assessments on lab systems using Python-based scanners and CVE databases, delivering remediation recommendations that reduced
+exploitable risks by 30% and supported compliance with NIST and HIPAA security guidelines.
+● Embedded security into CI/CD pipelines using IaC tools, enabling engineering teams to deploy secure applications faster while maintaining strict vulnerability
+management protocols.
+● Mentored junior engineers on cloud-native security controls and threat modeling, fostering a culture of security awareness that improved cross-functional
+team collaboration.
+Cloud Security Engineer
+ERPBotHub Pvt. Ltd | Ahmedabad, India | 04/2022 - 08/2023 Link
+● Engineered secure AWS infrastructure by configuring WAF rules and security groups, effectively hardening the network perimeter against unauthorized access
+and web-based attacks.
+● Deployed cloud security controls for AWS environments including GuardDuty, CloudTrail, and IAM policies, protecting critical business applications and
+achieving 100% compliance with security baselines.
+● Implemented vulnerability management program using Nessus and custom Python automation, identifying and remediating 23 critical vulnerabilities before
+exploitation across servers, endpoints, and network devices.
+● Configured and managed security tools including Palo Alto firewalls, Splunk SIEM, and CrowdStrike EDR, correlating events across endpoints to detect
+advanced persistent threats.
+● Developed incident response procedures aligned with NIST 800-61, reducing mean time to respond (MTTR) from 4 hours to 45 minutes through automated
+playbooks and orchestration.
+● Managed hybrid cloud security operations by integrating on-premise logs with cloud-native monitoring tools, ensuring comprehensive visibility across the
+entire enterprise ecosystem.
+● Refined identity access management frameworks by implementing RBAC and PIM policies, significantly reducing the risk of privilege escalation and insider
+threats.
+ Network Security Analyst
+SynZeal Research Pvt. Ltd | Ahmedabad, India | 06/2020 - 03/2022 Link
+● Administered network security controls including firewalls and intrusion detection systems, monitoring traffic patterns to identify and block malicious activity
+in real-time.
+● Managed endpoint security using antivirus, host-based firewalls, and security baselines, maintaining best protection against malware and unauthorized
+access.
+● Supported incident response activities by analyzing security alerts and collaborating with senior analysts to contain malware outbreaks and minimize
+operational downtime.
+● Documented security procedures and system hardening guidelines, ensuring all endpoint configurations met internal compliance standards and industry best
+practices.
+LEADERSHIP & INVOLVEMENT
+● IT Help desk specialist in GAP - Modernized NGO's tech stack, enhancing cybersecurity posture and training 8 staff in cybersecurity hygiene. Provided IT help
+desk support to 200+ HIV-positive patients for over 4 years and that was my full time IT Help Desk Technician experience.
+● Team Captain, U.S. DOE CyberForce Competition - Led a six-member blue team; scored 5,308 points and finished in the top quartile nationwide.
+● Coach, Toledo Transition Program - Mentored cybersecurity undergrads with workshops on Raspberry Pi hardening, SIEM rule-tuning, and OWASP IoT Top 10.
+● Volunteer Network Administrator, Bedford Inn - Managed wired and wireless hotel networks for 1 year, improving uptime and securing guest/staff Wi-Fi via
+VLANs, access controls, and regular patching with make one AI based ID Scanner.
+● Startup Founder & Team Lead, Oasis Marketing - Built and coordinated a 34-person team, organizing weekly events that boosted revenue and brand reach.
+PROJECTS
+ Enterprise Security Operations Center (SOC) Implementation | Open Source Project- github Link
+● Designed and deployed enterprise SOC using Splunk Enterprise, integrating logs from 100+ sources including firewalls, endpoints, and cloud services.
+● Developed custom detection rules based on MITRE ATT&CK tactics, achieving 95% threat detection rate in simulated attacks.
+● Created automated incident response workflows using SOAR, reducing incident resolution time by 60%.
+● Implemented threat intelligence feeds from OSINT sources, enriching security events with contextual information.
+ Cloud Security Architecture & Migration | ERPBotHub Link
+● Architected secure AWS environment implementing Well-Architected Framework security pillar, including VPC design, security groups, and IAM policies.
+● Deployed cloud-native security tools including AWS GuardDuty, Security Hub, and Config for continuous compliance monitoring.
+● Implemented data encryption at rest and in transit using KMS and TLS, protecting sensitive business data.
+● Created disaster recovery plan with RTO of 4 hours and RPO of 1 hour, ensuring business continuity.
+ Zero Trust Network Implementation | Personal Lab Link
+● Built zero trust architecture using software-defined perimeter, micro-segmentation, and continuous verification.
+● Implemented certificate-based authentication using PKI infrastructure for all network resources.
+● Deployed network access control (NAC) solution enforcing device compliance before network access.
+ Secure Network Infrastructure Deployment (Volunteer Project) | Bedford Inn, Michigan, USA Link
+● Designed and deployed a secure hotel network with routers, switches, VLAN segmentation, firewall rules, VPN access, and IDS alerts.
+● Integrated AI-based ID verification at check-in, blocking flagged profiles and preventing unauthorized customers from check in.
+● Delivered a scalable, compliant, and audit-ready infrastructure that improved uptime and guest trust.
+ IoT Security Gateway & Threat Detection Platform | Personal Research Lab Link
+● Built a Raspberry Pi–based IoT gateway with Snort IDS, MQTT hardening, TLS encryption, and NAC enforcement.
+● Automated vulnerability scanning and log correlation with Python, detecting anomalies and containing lateral movement.
+● Developed ML-based anomaly detection pipeline, achieving >90% accuracy in identifying malicious IoT behavior.
+ Advanced Threat Hunting Platform | University of Toledo Link
+● Developed Python-based threat hunting tools integrating multiple threat intelligence feeds to identify IOCs across enterprise infrastructure.
+● Created machine learning models for anomaly detection, achieving 92% accuracy in identifying malicious behavior.
+● Built automated response capabilities for common attack patterns, preventing lateral movement and data exfiltration.
+CERTIFICATIONS
+● SANS NetWars Core Certificate - Hands-on threat detection & incident-response labs.
+● Google Cybersecurity Professional Certificate - Network security, SIEM, incident response fundamentals.
+● Career Essentials in Cybersecurity by Microsoft and LinkedIn - Microsoft Security Copilot, Microsoft Entra, Defender, and Sentinel.
+● AWS Certified Cloud Practitioner - IAM, GuardDuty, CloudTrail, shared-responsibility model.
+● TryHackMe Red Teaming Lab path- execute adversary attack emulations as a Red Team Operator.
+● Linux Essentials - System hardening & log analysis.
+● Python for Cybersecurity - Automation & SOC playbooks.
+● SQL & PHP Secure Development - Securing backend services, validating input, controlling access.
+● Web Development Security Basics - HTTPS, firewall configs, secure web app structure.
+● Ethical Hacking Most Advanced Level Penetration Testing - Red-team tactics & exploit development.
+● CompTIA Security+ - Core security architecture & operations.
+● Google Professional Cloud Security Engineer - GCP identity, access, logging, compliance.
+● OSINT Fundamentals / CTIA - Threat-intelligence pipeline & feed triage.
+TECHNICAL SKILLS
+• CLOUD SECURITY: AWS (GuardDuty, Config), Azure (Sentinel, Defender), GCP, SaaS Security, CSPM, CWPP, CASB
+• NETWORK DEFENSE: WAF Configuration, Firewalls (Palo Alto), VPN, IDS/IPS (Snort), VPC Design, Segmentation, TLS/SSL
+• DEVSECOPS & IAC: CI/CD Pipelines, Terraform, Ansible, Docker Security, API Security, Git Security, Container Hardening
+• IDENTITY & ACCESS: IAM Policies, RBAC, PIM/PAM, SSO, MFA, Active Directory, Azure AD
+• SECURITY OPERATIONS: SIEM (Splunk, ELK), SOAR, Threat Hunting, Incident Response, Log Analysis, MITRE ATT&CK
+• GRC & COMPLIANCE: NIST 800-53, HIPAA, SOC2, FedRAMP, CIS Benchmarks, Risk Assessment, Audit Support
+• VULNERABILITY MGMT: Nessus, Qualys, InsightVM, Patch Management, Remediation, Risk Prioritization, CVE Analysis
+• ENDPOINT SECURITY: EDR (CrowdStrike Falcon), Antivirus, HIPS, Device Control, Host Hardening, OSQuery, Sysmon
+• APPLICATION SECURITY: SAST/DAST, OWASP Top 10, Secure Coding, Web App Scanning, Burp Suite, Dependency Check
+• PROGRAMMING: Python (Automation), Bash, PowerShell, SQL, JSON, YAML, Regular Expressions
+EDUCATION
+● Master of Science in Cybersecurity - University of Toledo, Toledo, OH
+Expected 2025 · GPA 3.9/4.0.
+Capstone: “Founder of Autoneties. -AI-powered network security for smart homes.”. Link
+● Bachelor of Science - Gujarat Technological University, Gandhinagar, India
+Graduated 2021 · CGPA 7.56/10
+Capstone: “Evolution of Clinical Trials” - 3rd place, state-level pitch competition.
+Published an article: Comprehensive Review on Edible Vaccine. J. Drug Delivery Ther. Link
+
+
+Harshil P. Patel
+Staff Offensive Security Engineer | Red Team Penetration Tester
+ +1(312)-438-0016 mail2harshilppatel@gmail.com www.linkedin.com/in/harshil-patel-security-engineer portfolio.autoneties.com
+Austin, TX, USA
+ PROFESSIONAL SUMMARY
+Staff Offensive Security Engineer with over eight years of experience designing complex attack chains and executing full-stack penetration testing across
+enterprise environments. Directed multi-week adversary emulation engagements mimicking advanced persistent threats to validate detection capabilities
+and tune SIEM alerts through collaborative purple teaming. Developed custom payloads and obfuscated scripts in Python and C++ to bypass modern EDR
+solutions like CrowdStrike, successfully avoiding detection across thousands of endpoints. Audited cloud infrastructure across AWS and Kubernetes clusters
+to identify IAM misconfigurations, securing over fifty critical cloud assets before malicious exploitation could occur. Executed AI and LLM probing using PyRIT
+and Promptfoo to uncover prompt injection vulnerabilities aligned with the OWASP Top Ten for LLMs. Managed testing infrastructure including Burp Suite
+Professional and Cobalt Strike C2 listeners to support continuous vulnerability validation and triage for hundreds of bug bounty submissions. Provided direct
+remediation guidance to engineering teams for complex application security flaws including XSS and IDOR, reducing mean time to remediate by five days.
+ EXPERIENCE
+Staff Offensive Security Engineer
+CRS Laboratory | Chicago, USA | 01/2024 – 10/2025 Link
+● Performed extensive prompt injection and jailbreak testing on artificial intelligence prototypes using PyRIT and Promptfoo to uncover vulnerabilities aligned
+with the OWASP Top Ten.
+● Conducted proactive threat hunting with the MITRE ATT&CK framework, discovering and mitigating 5 previously undetected advanced threats, strengthening
+the organization’s detection and response capabilities.
+● Built automated SQL/Python workflows and security dashboards, improving data accuracy and reducing manual reporting time by 40%, while providing
+executive leadership with real-time visibility into risk metrics, compliance posture, and overall security operations.
+● Performed vulnerability assessments on lab systems using Python-based scanners and CVE databases, delivering remediation recommendations that reduced
+exploitable risks by 30% and supported compliance with NIST and HIPAA security guidelines.
+● Executed full-stack penetration testing across complex web applications and external APIs using Burp Suite Professional to identify, triage, and validate critical
+application security flaws.
+● Developed custom payloads and obfuscated scripts in Python and C++ to bypass modern endpoint detection systems and maintain stealth during advanced
+adversary emulation operations.
+Senior Penetration Tester
+ERPBotHub Pvt. Ltd | Ahmedabad, India | 04/2022 - 08/2023 Link
+● Managed the internal bug bounty program by triaging complex vulnerability reports and providing clear technical remediation guidance to developers for
+critical cross-site scripting flaws.
+● Deployed cloud security controls for AWS environments including GuardDuty, CloudTrail, and IAM policies, protecting critical business applications and
+achieving 100% compliance with security baselines.
+● Implemented vulnerability management program using Nessus and custom Python automation, identifying and remediating 23 critical vulnerabilities before
+exploitation across servers, endpoints, and network devices.
+● Configured and managed security tools including Palo Alto firewalls, Splunk SIEM, and CrowdStrike EDR, correlating events across endpoints to detect
+advanced persistent threats.
+● Developed incident response procedures aligned with NIST 800-61, reducing mean time to respond (MTTR) from 4 hours to 45 minutes through automated
+playbooks and orchestration.
+● Collaborated directly with internal detection engineering teams during purple team engagements to tune SIEM alerts based on advanced post-exploitation
+techniques observed in simulated attacks.
+● Conducted targeted cloud infrastructure attacks against AWS and Kubernetes environments to expose severe IAM misconfigurations and container escape
+paths before malicious actors could strike.
+ Offensive Security Analyst
+SynZeal Research Pvt. Ltd | Ahmedabad, India | 06/2020 - 03/2022 Link
+● Wrote functional scripts in Python and Bash to automate repetitive vulnerability scanning tasks, significantly reducing manual testing hours while increasing
+overall network assessment coverage.
+● Managed endpoint security using antivirus, host-based firewalls, and security baselines, maintaining best protection against malware and unauthorized
+access.
+● Conducted comprehensive internal network audits using Nmap and Metasploit frameworks to discover unpatched services and demonstrate potential lateral
+movement paths to executive leadership teams.
+● Executed manual penetration testing on mobile applications across iOS and Android platforms to identify insecure data storage and broken access controls
+within backend APIs.
+LEADERSHIP & INVOLVEMENT
+● IT Help desk specialist in GAP - Modernized NGO's tech stack, enhancing cybersecurity posture and training 8 staff in cybersecurity hygiene. Provided IT help
+desk support to 200+ HIV-positive patients for over 4 years and that was my full time IT Help Desk Technician experience.
+● Team Captain, U.S. DOE CyberForce Competition - Led a six-member blue team; scored 5,308 points and finished in the top quartile nationwide.
+● Coach, Toledo Transition Program - Mentored cybersecurity undergrads with workshops on Raspberry Pi hardening, SIEM rule-tuning, and OWASP IoT Top 10.
+● Volunteer Network Administrator, Bedford Inn - Managed wired and wireless hotel networks for 1 year, improving uptime and securing guest/staff Wi-Fi via
+VLANs, access controls, and regular patching with make one AI based ID Scanner.
+● Startup Founder & Team Lead, Oasis Marketing - Built and coordinated a 34-person team, organizing weekly events that boosted revenue and brand reach.
+PROJECTS
+ Enterprise Security Operations Center (SOC) Implementation | Open Source Project- github Link
+● Designed and deployed enterprise SOC using Splunk Enterprise, integrating logs from 100+ sources including firewalls, endpoints, and cloud services.
+● Developed custom detection rules based on MITRE ATT&CK tactics, achieving 95% threat detection rate in simulated attacks.
+● Created automated incident response workflows using SOAR, reducing incident resolution time by 60%.
+● Implemented threat intelligence feeds from OSINT sources, enriching security events with contextual information.
+ Cloud Security Architecture & Migration | ERPBotHub Link
+● Architected secure AWS environment implementing Well-Architected Framework security pillar, including VPC design, security groups, and IAM policies.
+● Deployed cloud-native security tools including AWS GuardDuty, Security Hub, and Config for continuous compliance monitoring.
+● Implemented data encryption at rest and in transit using KMS and TLS, protecting sensitive business data.
+● Created disaster recovery plan with RTO of 4 hours and RPO of 1 hour, ensuring business continuity.
+ Zero Trust Network Implementation | Personal Lab Link
+● Built zero trust architecture using software-defined perimeter, micro-segmentation, and continuous verification.
+● Implemented certificate-based authentication using PKI infrastructure for all network resources.
+● Deployed network access control (NAC) solution enforcing device compliance before network access.
+ Secure Network Infrastructure Deployment (Volunteer Project) | Bedford Inn, Michigan, USA Link
+● Designed and deployed a secure hotel network with routers, switches, VLAN segmentation, firewall rules, VPN access, and IDS alerts.
+● Integrated AI-based ID verification at check-in, blocking flagged profiles and preventing unauthorized customers from check in.
+● Delivered a scalable, compliant, and audit-ready infrastructure that improved uptime and guest trust.
+ IoT Security Gateway & Threat Detection Platform | Personal Research Lab Link
+● Built a Raspberry Pi–based IoT gateway with Snort IDS, MQTT hardening, TLS encryption, and NAC enforcement.
+● Automated vulnerability scanning and log correlation with Python, detecting anomalies and containing lateral movement.
+● Developed ML-based anomaly detection pipeline, achieving >90% accuracy in identifying malicious IoT behavior.
+ Advanced Threat Hunting Platform | University of Toledo Link
+● Developed Python-based threat hunting tools integrating multiple threat intelligence feeds to identify IOCs across enterprise infrastructure.
+● Created machine learning models for anomaly detection, achieving 92% accuracy in identifying malicious behavior.
+● Built automated response capabilities for common attack patterns, preventing lateral movement and data exfiltration.
+CERTIFICATIONS
+● SANS NetWars Core Certificate - Hands-on threat detection & incident-response labs.
+● Google Cybersecurity Professional Certificate - Network security, SIEM, incident response fundamentals.
+● Career Essentials in Cybersecurity by Microsoft and LinkedIn - Microsoft Security Copilot, Microsoft Entra, Defender, and Sentinel.
+● AWS Certified Cloud Practitioner - IAM, GuardDuty, CloudTrail, shared-responsibility model.
+● TryHackMe Red Teaming Lab path- execute adversary attack emulations as a Red Team Operator.
+● Linux Essentials - System hardening & log analysis.
+● Python for Cybersecurity - Automation & SOC playbooks.
+● SQL & PHP Secure Development - Securing backend services, validating input, controlling access.
+● Web Development Security Basics - HTTPS, firewall configs, secure web app structure.
+● Ethical Hacking Most Advanced Level Penetration Testing - Red-team tactics & exploit development.
+● CompTIA Security+ - Core security architecture & operations.
+● Google Professional Cloud Security Engineer - GCP identity, access, logging, compliance.
+● OSINT Fundamentals / CTIA - Threat-intelligence pipeline & feed triage.
+TECHNICAL SKILLS
+• OFFENSIVE SECURITY: Penetration Testing, Adversary Emulation, Red Teaming, Purple Teaming, Bug Bounty, AppSec, Validation
+• EXPLOITATION TOOLS: Burp Suite Professional, Metasploit, Cobalt Strike, Sliver, Havoc, Nmap Security Scanner, Wireshark
+• CLOUD INFRASTRUCTURE: Amazon Web Services, Microsoft Azure, Kubernetes, Docker Containers, CloudTrail, GuardDuty, IAM Roles
+• AI SYSTEM SECURITY: Prompt Injection, Jailbreak Testing, PyRIT, Promptfoo, Garak, LangChain, TensorFlow Machine Learning
+• PROGRAMMING LANGUAGES: Python Scripting, C++ Development, Bash Shell, SQL Database, PHP Backend, JavaScript, PowerShell
+• APPLICATION VULNERABILITIES: Cross Site Scripting, SQL Injection, IDOR, Container Escapes, IAM Flaws, Malware, Data Theft
+• SECURITY FRAMEWORKS: MITRE ATT&CK, OWASP Top Ten, OWASP for LLMs, NIST, HIPAA, Well Architected Framework, Cyber Kill Chain
+• DEFENSIVE SECURITY: Splunk SIEM, CrowdStrike EDR, Palo Alto Firewalls, Snort IDS, Security Center, SOAR Platforms, NAC Tool
+• SECURITY OPERATIONS: Threat Hunting, Incident Response, Log Analysis, Continuous Audits, Disaster Recovery, PKI, Zero Trust
+• OPERATING SYSTEMS: Linux Distributions, Windows Server, Apple iOS, Android Mobile, macOS Environment, Kali Linux, Ubuntu OS
+EDUCATION
+● Master of Science in Cybersecurity - University of Toledo, Toledo, OH
+Expected 2025 · GPA 3.9/4.0.
+Capstone: “Founder of Autoneties. -AI-powered network security for smart homes.”. Link
+● Bachelor of Science - Gujarat Technological University, Gandhinagar, India
+Graduated 2021 · CGPA 7.56/10
+Capstone: “Evolution of Clinical Trials” - 3rd place, state-level pitch competition.
+Published an article: Comprehensive Review on Edible Vaccine. J. Drug Delivery Ther. Link

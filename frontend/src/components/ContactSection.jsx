@@ -49,7 +49,7 @@ export default function ContactSection() {
           description: "Thank you for reaching out. I'll get back to you soon.",
           duration: 5000,
         });
-        
+
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         throw new Error(data.message || 'Failed to send message');
@@ -139,7 +139,7 @@ export default function ContactSection() {
           </h2>
           <div className="w-20 h-1 bg-[#155724] mx-auto mb-6" />
           <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-8">
-            Have a project in mind or want to discuss cybersecurity? Let's connect!
+            Have a security architecture challenge or want to discuss AI, cloud, or offensive security? Let's connect!
           </p>
 
           {/* Quick Stats */}
@@ -247,7 +247,7 @@ export default function ContactSection() {
                 <span className="text-lg font-bold text-gray-900">Available for Work</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Currently open to new opportunities in Security Engineering, SOC Analysis, and Cybersecurity roles.
+                Currently open to new opportunities in AI Security Architecture, Cloud Security, Site Reliability Engineering, and Offensive Security roles.
               </p>
             </motion.div>
           </motion.div>

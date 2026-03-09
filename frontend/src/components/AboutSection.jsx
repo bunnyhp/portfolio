@@ -1,65 +1,65 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Shield, Cloud, Lock, Terminal, Target, Activity, Code, Award, TrendingUp, Users } from 'lucide-react';
+import { Shield, Cloud, Lock, Terminal, Target, Activity, Code, Award, TrendingUp, Users, Crosshair, Server } from 'lucide-react';
 import { personalInfo } from '../mockData';
 
 export default function AboutSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const stats = [
-    { label: 'Daily Events Analyzed', value: '50K+', icon: Activity },
-    { label: 'Years Experience', value: '5+', icon: TrendingUp },
+    { label: 'Years Experience', value: '8+', icon: TrendingUp },
     { label: 'Projects Completed', value: '22+', icon: Award },
-    { label: 'Certifications', value: '12+', icon: Shield }
+    { label: 'Certifications', value: '13+', icon: Shield },
+    { label: 'Daily Events Analyzed', value: '50K+', icon: Activity }
   ];
 
   const expertise = [
     {
       icon: Shield,
-      title: 'SIEM & Threat Hunting',
-      description: 'Expert in Splunk SIEM analysis, log correlation, and advanced threat hunting using MITRE ATT&CK framework',
+      title: 'AI Security & ML',
+      description: 'Adversarial defense, model hardening, LLM security, prompt injection testing, and inference protection for AI systems',
       color: 'from-green-500 to-emerald-600'
     },
     {
-      icon: Target,
-      title: 'Incident Response',
-      description: 'Rapid threat detection, investigation, and mitigation of security incidents with comprehensive documentation',
+      icon: Cloud,
+      title: 'Cloud Architecture',
+      description: 'Multi-cloud security across AWS, Azure, and GCP — IAM, VPC design, encryption, zero trust, and compliance automation',
       color: 'from-blue-500 to-cyan-600'
     },
     {
-      icon: Cloud,
-      title: 'Cloud Security',
-      description: 'AWS security architecture, IAM management, and cloud infrastructure security implementation',
-      color: 'from-purple-500 to-indigo-600'
-    },
-    {
-      icon: Lock,
-      title: 'Vulnerability Management',
-      description: 'Comprehensive risk assessment, vulnerability scanning, and security hardening across enterprise systems',
+      icon: Crosshair,
+      title: 'Offensive Security',
+      description: 'Full-stack penetration testing, red teaming, adversary emulation, bug bounty triage, and application security audits',
       color: 'from-red-500 to-pink-600'
     },
     {
       icon: Code,
-      title: 'Security Automation',
-      description: 'Python-based SOC playbooks, automated threat intelligence, and security operations optimization',
+      title: 'DevSecOps & Automation',
+      description: 'CI/CD pipeline security, Terraform IaC, Docker/Kubernetes hardening, and automated compliance workflows',
+      color: 'from-purple-500 to-indigo-600'
+    },
+    {
+      icon: Target,
+      title: 'Threat Hunting & IR',
+      description: 'MITRE ATT&CK-based threat hunting, SIEM analysis, incident response automation, and SOAR orchestration',
       color: 'from-yellow-500 to-orange-600'
     },
     {
-      icon: Users,
-      title: 'Education & Mentorship',
-      description: 'Training and supporting individuals in cybersecurity practices, academic development, and career growth',
+      icon: Server,
+      title: 'SRE & Infrastructure',
+      description: 'Observability with Prometheus/Grafana, Kubernetes cluster management, Helm deployments, and disaster recovery',
       color: 'from-teal-500 to-green-600'
     }
   ];
 
   const responsibilities = [
-    'Monitor and analyze security events using SIEM platforms (Splunk, Elastic)',
-    'Conduct proactive threat hunting and false positive reduction initiatives',
-    'Design and implement security architectures for cloud and on-premise infrastructure',
-    'Develop and maintain threat intelligence feeds and security documentation',
-    'Perform vulnerability assessments and penetration testing',
-    'Build secure CI/CD pipelines and automate security operations'
+    'Architect AI security standards and protect ML model training pipelines',
+    'Design multi-cloud security frameworks aligned with SABSA and NIST',
+    'Execute penetration testing and adversary emulation engagements',
+    'Build IaC pipelines with Terraform/Ansible for secure cloud provisioning',
+    'Manage Kubernetes clusters and implement production observability',
+    'Embed security-by-design into CI/CD and Agile DevOps workflows'
   ];
 
   return (
@@ -86,7 +86,7 @@ export default function AboutSection() {
           </h2>
           <div className="w-20 h-1 bg-[#155724] mx-auto mb-6" />
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Security Engineer specializing in SIEM analysis, incident response, and threat hunting
+            Security Architect specializing in AI security, cloud infrastructure, offensive testing, and site reliability
           </p>
         </motion.div>
 
@@ -124,22 +124,22 @@ export default function AboutSection() {
               <Shield className="w-7 h-7 text-[#155724]" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Security Engineer</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Security Architect & Engineer</h3>
               <p className="text-gray-600 leading-relaxed">
-                A highly driven and accomplished Security Engineer with extensive hands-on experience in <span className="text-[#155724] font-semibold">SIEM analysis</span>, <span className="text-[#155724] font-semibold">incident response</span>, and <span className="text-[#155724] font-semibold">threat hunting</span>.
+                A versatile security leader with <span className="text-[#155724] font-semibold">8+ years</span> designing secure infrastructures for <span className="text-[#155724] font-semibold">financial and enterprise environments</span>.
               </p>
             </div>
           </div>
-          
+
           <div className="space-y-4 text-gray-700 leading-relaxed pl-16">
             <p>
-              Currently serving as an <strong>Education Coach at The University of Toledo</strong>, supporting individuals with disabilities in their academic and professional development, while continuing to apply cybersecurity expertise in various projects.
+              Architected scalable security frameworks across <strong>Azure and AWS</strong>, integrating <strong>SABSA methodologies</strong> to align technical controls with business objectives. Directed DevSecOps teams in securing data pipelines and ML models, reducing adversarial threat risks through rigorous identity and API protection standards.
             </p>
             <p>
-              Previously worked as a <strong>Security Operations Center Analyst at CRS Laboratories</strong>, where I monitored security events using <strong>Splunk SIEM</strong>, analyzed <strong className="text-[#155724]">50,000+ daily events</strong>, and conducted threat hunting exercises using the <strong>MITRE ATT&CK framework</strong>.
+              Most recently served as <strong>Lead Security Architect at CRS Laboratory</strong>, building enterprise-wide AI security standards, conducting threat hunting with MITRE ATT&CK, and executing full-stack penetration testing across cloud-native applications.
             </p>
             <p>
-              Specialized in log correlation, threat hunting, cloud security, and vulnerability management. Passionate about cybersecurity and making a meaningful impact through education and mentorship.
+              Expert in translating complex architectural requirements into execution — from <span className="text-[#155724] font-semibold">offensive security testing</span> to <span className="text-[#155724] font-semibold">production reliability engineering</span>, fostering a culture of security-by-design across agile teams.
             </p>
           </div>
         </motion.div>

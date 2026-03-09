@@ -20,7 +20,9 @@ export default function Navigation() {
     { name: 'Home', path: '#home' },
     { name: 'About', path: '#about' },
     { name: 'Experience', path: '#experience' },
+    { name: 'Skills', path: '#skills' },
     { name: 'Projects', path: '#projects' },
+    { name: 'AI Workflow', path: '#workflows' },
     { name: 'Contact', path: '#contact' }
   ];
 
@@ -28,11 +30,10 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-gray-900/95 backdrop-blur-lg border-b border-white/10 shadow-xl shadow-black/20' 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-gray-900/95 backdrop-blur-lg border-b border-white/10 shadow-xl shadow-black/20'
           : 'bg-gray-900/90 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -49,11 +50,10 @@ export default function Navigation() {
               <a
                 key={link.path}
                 href={link.path}
-                className={`text-sm font-medium transition-colors relative group ${
-                  location.hash === link.path || (link.path === '#home' && location.pathname === '/') 
-                    ? 'text-[#28a745]' 
+                className={`text-sm font-medium transition-colors relative group ${location.hash === link.path || (link.path === '#home' && location.pathname === '/')
+                    ? 'text-[#28a745]'
                     : 'text-gray-300 hover:text-white'
-                }`}
+                  }`}
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#28a745] transition-all group-hover:w-full" />
@@ -92,11 +92,10 @@ export default function Navigation() {
                   key={link.path}
                   href={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-sm font-medium transition-colors ${
-                    location.hash === link.path || (link.path === '#home' && location.pathname === '/') 
-                      ? 'text-[#28a745]' 
+                  className={`block text-sm font-medium transition-colors ${location.hash === link.path || (link.path === '#home' && location.pathname === '/')
+                      ? 'text-[#28a745]'
                       : 'text-gray-300 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </a>

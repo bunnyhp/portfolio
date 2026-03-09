@@ -23,7 +23,7 @@ export default function CertificationsSection() {
             </h2>
             <div className="w-20 h-1 bg-[#155724] mx-auto mb-4" />
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Academic background and professional certifications in cybersecurity
+              Academic background and professional certifications in security architecture, cloud, and offensive testing
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export default function CertificationsSection() {
               <GraduationCap className="w-8 h-8 text-[#155724]" />
               <h3 className="text-3xl font-bold text-gray-900">Education</h3>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {education.map((edu, index) => (
                 <motion.div
@@ -111,11 +111,10 @@ export default function CertificationsSection() {
 
                   {/* Year/Status Badge */}
                   <div className="mb-3">
-                    <span className={`inline-block px-3 py-1.5 rounded-lg text-xs font-bold ${
-                      cert.year.toLowerCase().includes('scheduled') 
-                        ? 'bg-amber-100 text-amber-700 border border-amber-300' 
+                    <span className={`inline-block px-3 py-1.5 rounded-lg text-xs font-bold ${cert.year.toLowerCase().includes('scheduled')
+                        ? 'bg-amber-100 text-amber-700 border border-amber-300'
                         : 'bg-[#155724]/10 text-[#155724] border border-[#155724]/30'
-                    }`}>
+                      }`}>
                       {cert.year}
                     </span>
                   </div>

@@ -45,10 +45,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <span className="text-3xl font-bold text-white">HARSHIL <span className="text-[#28a745]">P.</span></span>
-              <p className="text-sm text-gray-400 mt-2">Security Engineer</p>
+              <p className="text-sm text-gray-400 mt-2">Security Architect & Engineer</p>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Cybersecurity Engineer specializing in SIEM analysis, incident response, and threat hunting. Passionate about securing digital assets.
+              Security Architect specializing in AI security, cloud infrastructure, offensive testing, and site reliability engineering.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -112,7 +112,7 @@ export default function Footer() {
               Connect
             </h3>
             <p className="text-gray-400 text-sm mb-6">
-              Let's connect and discuss how I can help secure your digital infrastructure.
+              Let's connect and discuss how I can help architect and secure your infrastructure.
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
               {socialLinks.map((social, index) => (
@@ -144,11 +144,11 @@ export default function Footer() {
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span>© {currentYear} {personalInfo.name}. All rights reserved.</span>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <span className="text-sm text-gray-400">Made with</span>
               <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
-              <span className="text-sm text-gray-400">for Cybersecurity</span>
+              <span className="text-sm text-gray-400">for Security Engineering</span>
             </div>
 
             {/* Back to Top Button */}

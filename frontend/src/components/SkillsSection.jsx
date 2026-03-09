@@ -1,140 +1,170 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Shield, Cloud, Code, Lock, Server, Terminal, Network, FileSearch, Users, Award, AlertTriangle, Database } from 'lucide-react';
+import { Shield, Cloud, Code, Lock, Server, Terminal, Network, FileSearch, Users, Award, AlertTriangle, Database, Crosshair, Activity } from 'lucide-react';
 
 export default function SkillsSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
-  const [activeTab, setActiveTab] = useState('core');
+  const [activeTab, setActiveTab] = useState('architecture');
 
   const tabs = [
-    { id: 'core', label: 'Core Security', icon: Shield },
-    { id: 'tools', label: 'Tools & Platforms', icon: Terminal },
-    { id: 'frameworks', label: 'Frameworks & Compliance', icon: Award },
-    { id: 'technical', label: 'Technical Skills', icon: Code }
+    { id: 'architecture', label: 'Security Architecture', icon: Shield },
+    { id: 'cloud', label: 'Cloud & DevSecOps', icon: Cloud },
+    { id: 'offensive', label: 'Offensive Security', icon: Crosshair },
+    { id: 'sre', label: 'SRE & Automation', icon: Server }
   ];
 
   const skillsData = {
-    core: [
+    architecture: [
       {
-        category: 'Security Operations',
+        category: 'AI Security & ML',
         icon: Shield,
         color: 'from-green-500 to-emerald-600',
-        skills: ['Splunk', 'ELK Stack', 'QRadar', 'CrowdStrike', 'Defender ATP', 'SentinelOne', 'SOAR Platforms', 'Real-time Alert Triage', 'Rule Tuning']
+        skills: ['Adversarial Defense', 'Model Hardening', 'LLM Security', 'Inference Protection', 'Data Privacy', 'Algorithm Auditing', 'Bias Detection', 'PyRIT', 'Promptfoo']
+      },
+      {
+        category: 'Security Frameworks',
+        icon: Award,
+        color: 'from-blue-500 to-cyan-600',
+        skills: ['SABSA', 'NIST 800-53', 'ISO 27001', 'MITRE ATT&CK', 'CIS Benchmarks', 'OWASP Top 10', 'OWASP for LLMs', 'Cyber Kill Chain']
+      },
+      {
+        category: 'Identity & Access Management',
+        icon: Lock,
+        color: 'from-purple-500 to-indigo-600',
+        skills: ['OAuth 2.0', 'OIDC', 'SAML', 'Active Directory', 'Azure AD', 'MFA', 'RBAC', 'PIM/PAM', 'Zero Trust']
+      },
+      {
+        category: 'GRC & Compliance',
+        icon: FileSearch,
+        color: 'from-red-500 to-pink-600',
+        skills: ['NIST 800-53', 'HIPAA', 'SOC 2', 'GDPR', 'FedRAMP', 'Risk Assessment', 'Audit Support', 'Data Classification']
+      },
+      {
+        category: 'Data Protection',
+        icon: Database,
+        color: 'from-yellow-500 to-orange-600',
+        skills: ['DLP', 'TLS/SSL', 'Database Security', 'Encryption at Rest', 'Key Management (KMS)', 'Integrity Monitoring', 'PKI']
       },
       {
         category: 'Network Security',
         icon: Network,
-        color: 'from-blue-500 to-cyan-600',
-        skills: ['Palo Alto', 'Fortinet', 'Snort', 'Suricata', 'VPN', 'Network Segmentation', 'Zero Trust Architecture', 'TCP/IP', 'DNS/HTTP/S', 'Wireshark']
+        color: 'from-teal-500 to-green-600',
+        skills: ['Palo Alto Firewalls', 'VPN', 'IDS/IPS (Snort)', 'Micro-segmentation', 'Zero Trust Architecture', 'TCP/IP', 'DNS Security', 'WAF']
+      }
+    ],
+    cloud: [
+      {
+        category: 'AWS Security',
+        icon: Cloud,
+        color: 'from-green-500 to-emerald-600',
+        skills: ['GuardDuty', 'CloudTrail', 'Security Hub', 'AWS Config', 'IAM Policies', 'VPC Design', 'KMS Encryption', 'Landing Zones']
       },
       {
-        category: 'Cloud Security',
-        icon: Cloud,
+        category: 'Azure & GCP',
+        icon: Shield,
+        color: 'from-blue-500 to-cyan-600',
+        skills: ['Azure Sentinel', 'Azure Defender', 'Microsoft Entra', 'Security Copilot', 'GCP Security', 'CSPM', 'CWPP', 'CASB']
+      },
+      {
+        category: 'Infrastructure as Code',
+        icon: Code,
         color: 'from-purple-500 to-indigo-600',
-        skills: ['AWS GuardDuty', 'CloudTrail', 'IAM', 'Security Hub', 'Azure Sentinel', 'Azure Defender', 'Cloud Security Posture Management', 'AWS Config']
+        skills: ['Terraform', 'Ansible', 'CloudFormation', 'Jsonnet', 'Helm Charts', 'Workspace Management', 'State Strategies']
+      },
+      {
+        category: 'CI/CD & DevSecOps',
+        icon: Server,
+        color: 'from-red-500 to-pink-600',
+        skills: ['Jenkins', 'GitLab CI', 'Docker Security', 'Container Hardening', 'API Security', 'Git Security', 'Policy Enforcement']
       },
       {
         category: 'Vulnerability Management',
         icon: AlertTriangle,
-        color: 'from-red-500 to-pink-600',
-        skills: ['Nessus', 'Qualys', 'OpenVAS', 'Rapid7', 'CVSS Scoring', 'Risk-based Prioritization', 'CVE Analysis', 'CIS Benchmarks']
+        color: 'from-yellow-500 to-orange-600',
+        skills: ['Nessus', 'Qualys', 'InsightVM', 'Patch Management', 'CVE Analysis', 'Risk Prioritization', 'Remediation']
       },
       {
-        category: 'Identity & Access Management',
-        icon: Users,
+        category: 'Threat Management',
+        icon: Activity,
+        color: 'from-teal-500 to-green-600',
+        skills: ['Splunk ES', 'CrowdStrike Falcon', 'Threat Hunting', 'IOC Analysis', 'TTP Profiling', 'Anomaly Detection', 'SOAR']
+      }
+    ],
+    offensive: [
+      {
+        category: 'Penetration Testing',
+        icon: Crosshair,
+        color: 'from-green-500 to-emerald-600',
+        skills: ['Full-Stack Pen Testing', 'Web App Testing', 'API Security Testing', 'Mobile Testing (iOS/Android)', 'Internal Network Audits', 'Cloud Pen Testing']
+      },
+      {
+        category: 'Red Team & Emulation',
+        icon: Shield,
+        color: 'from-red-500 to-pink-600',
+        skills: ['Adversary Emulation', 'Purple Teaming', 'MITRE ATT&CK TTPs', 'Post-Exploitation', 'Lateral Movement', 'C2 Operations']
+      },
+      {
+        category: 'Exploitation Tools',
+        icon: Terminal,
+        color: 'from-purple-500 to-indigo-600',
+        skills: ['Burp Suite Pro', 'Metasploit', 'Cobalt Strike', 'Sliver', 'Havoc', 'Nmap', 'Wireshark', 'Kali Linux']
+      },
+      {
+        category: 'AI & LLM Security',
+        icon: Database,
+        color: 'from-blue-500 to-cyan-600',
+        skills: ['Prompt Injection Testing', 'Jailbreak Testing', 'PyRIT', 'Promptfoo', 'Garak', 'LangChain Security', 'OWASP LLM Top 10']
+      },
+      {
+        category: 'Application Vulnerabilities',
+        icon: AlertTriangle,
         color: 'from-yellow-500 to-orange-600',
-        skills: ['Active Directory', 'SSO', 'MFA', 'Privileged Access Management', 'LDAP', 'IAM Policies', 'Device Compliance', 'PKI', 'Least Privilege']
+        skills: ['XSS', 'SQL Injection', 'IDOR', 'Container Escapes', 'IAM Misconfigurations', 'SSRF', 'Deserialization']
+      },
+      {
+        category: 'Bug Bounty & Reporting',
+        icon: FileSearch,
+        color: 'from-teal-500 to-green-600',
+        skills: ['Bug Bounty Triage', 'Vulnerability Reporting', 'Remediation Guidance', 'SAST/DAST', 'Dependency Checks', 'Secure Code Review']
+      }
+    ],
+    sre: [
+      {
+        category: 'Container Orchestration',
+        icon: Server,
+        color: 'from-green-500 to-emerald-600',
+        skills: ['Kubernetes', 'Docker', 'ReplicaSets', 'Pod Configuration', 'Cluster Management', 'Kubelet', 'Microservices']
+      },
+      {
+        category: 'Observability',
+        icon: Activity,
+        color: 'from-blue-500 to-cyan-600',
+        skills: ['Prometheus', 'Grafana', 'Splunk SIEM', 'Elasticsearch', 'Logstash', 'Kibana (ELK)', 'Continuous Monitoring']
+      },
+      {
+        category: 'Programming & Scripting',
+        icon: Code,
+        color: 'from-purple-500 to-indigo-600',
+        skills: ['Python', 'Go', 'Ruby', 'SQL', 'Bash', 'PowerShell', 'JSON/YAML', 'Regular Expressions']
       },
       {
         category: 'Incident Response',
-        icon: FileSearch,
-        color: 'from-teal-500 to-green-600',
-        skills: ['NIST 800-61', 'IOC Triage', 'Log Analysis', 'IOC Correlation', 'Containment', 'Remediation', 'Root Cause Analysis', 'Automated Playbooks', 'Adversary Emulation']
-      }
-    ],
-    tools: [
-      {
-        category: 'SIEM & Monitoring',
-        icon: Server,
-        color: 'from-green-500 to-emerald-600',
-        skills: ['Splunk Enterprise', 'Elastic Stack (ELK)', 'IBM QRadar', 'Azure Sentinel', 'Log Analysis', 'Correlation Rules', 'Custom Dashboards']
-      },
-      {
-        category: 'EDR & Detection',
-        icon: Shield,
-        color: 'from-blue-500 to-cyan-600',
-        skills: ['CrowdStrike Falcon', 'Microsoft Defender ATP', 'SentinelOne', 'Carbon Black', 'Threat Detection', 'Behavioral Analysis']
-      },
-      {
-        category: 'Threat Intelligence',
-        icon: Database,
-        color: 'from-purple-500 to-indigo-600',
-        skills: ['MITRE ATT&CK', 'OSINT Feeds', 'Anomaly Detection', 'CTI Pipeline', 'ThreatConnect', 'IOC Management']
-      },
-      {
-        category: 'Forensics & Analysis',
-        icon: FileSearch,
-        color: 'from-red-500 to-pink-600',
-        skills: ['iLEAPP', 'Volatility', 'Static Analysis', 'Dynamic Analysis', 'Memory Forensics', 'Artifact Review', 'Chain of Custody']
-      },
-      {
-        category: 'Collaboration Tools',
-        icon: Users,
-        color: 'from-yellow-500 to-orange-600',
-        skills: ['Jira', 'ServiceNow', 'Git', 'Confluence', 'Slack', 'JSON/YAML', 'Markdown']
-      },
-      {
-        category: 'Scanning & Assessment',
-        icon: Lock,
-        color: 'from-teal-500 to-green-600',
-        skills: ['Nessus', 'Qualys', 'OpenVAS', 'Burp Suite', 'OWASP ZAP', 'Nikto', 'Nmap']
-      }
-    ],
-    frameworks: [
-      {
-        category: 'Security Frameworks',
-        icon: Award,
-        color: 'from-green-500 to-emerald-600',
-        skills: ['NIST Cybersecurity Framework', 'NIST 800-53', 'NIST 800-61', 'ISO 27001/27002', 'CIS Controls', 'MITRE ATT&CK']
-      },
-      {
-        category: 'Compliance Standards',
-        icon: Shield,
-        color: 'from-blue-500 to-cyan-600',
-        skills: ['PCI-DSS', 'HIPAA', 'SOC 2', 'GDPR', 'SOX', 'CMMC', 'FedRAMP']
-      },
-      {
-        category: 'Risk Management',
         icon: AlertTriangle,
-        color: 'from-purple-500 to-indigo-600',
-        skills: ['Risk Assessments', 'Business Impact Analysis', 'Threat Modeling', 'Risk Quantification', 'Security Audits']
-      }
-    ],
-    technical: [
+        color: 'from-red-500 to-pink-600',
+        skills: ['Disaster Recovery', 'Postmortem Analysis', 'Playbook Automation', 'Alert Triage', 'Root Cause Analysis', 'SOAR', 'NIST 800-61']
+      },
       {
-        category: 'Scripting & Automation',
-        icon: Code,
-        color: 'from-green-500 to-emerald-600',
-        skills: ['Python', 'PowerShell', 'Bash', 'SQL', 'JavaScript', 'Log Parsing', 'SOC Playbooks', 'Automation Scripts']
+        category: 'Cloud Platforms',
+        icon: Cloud,
+        color: 'from-yellow-500 to-orange-600',
+        skills: ['AWS', 'GCP', 'Azure', 'VPC', 'IAM', 'CloudTrail', 'AWS KMS', 'Security Groups']
       },
       {
         category: 'Operating Systems',
         icon: Terminal,
-        color: 'from-blue-500 to-cyan-600',
-        skills: ['Windows Server', 'Linux (Ubuntu, CentOS, Kali)', 'VMware vSphere', 'Hyper-V', 'System Hardening']
-      },
-      {
-        category: 'DevSecOps',
-        icon: Server,
-        color: 'from-purple-500 to-indigo-600',
-        skills: ['CI/CD Security', 'Docker Security', 'Kubernetes Security', 'Infrastructure as Code', 'Jenkins', 'GitLab CI']
-      },
-      {
-        category: 'Programming',
-        icon: Code,
-        color: 'from-red-500 to-pink-600',
-        skills: ['Python', 'JavaScript', 'SQL', 'PowerShell', 'Bash', 'REST APIs', 'Automation Tools']
+        color: 'from-teal-500 to-green-600',
+        skills: ['Linux (Ubuntu, CentOS, Kali)', 'Windows Server', 'macOS', 'iOS', 'Android', 'System Hardening']
       }
     ]
   };
@@ -163,7 +193,7 @@ export default function SkillsSection() {
           </h2>
           <div className="w-20 h-1 bg-[#155724] mx-auto mb-6" />
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Comprehensive expertise across cybersecurity, cloud infrastructure, and development
+            Comprehensive expertise across security architecture, cloud infrastructure, offensive testing, and reliability engineering
           </p>
         </motion.div>
 
@@ -178,15 +208,13 @@ export default function SkillsSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`group flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                activeTab === tab.id
+              className={`group flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${activeTab === tab.id
                   ? 'bg-[#155724] text-white shadow-lg shadow-[#155724]/30 scale-105'
                   : 'bg-white text-gray-700 hover:bg-gray-50 border border-[#155724]/30 hover:border-[#155724]/50'
-              }`}
+                }`}
             >
-              <tab.icon className={`w-5 h-5 transition-transform group-hover:scale-110 ${
-                activeTab === tab.id ? 'rotate-0' : ''
-              }`} />
+              <tab.icon className={`w-5 h-5 transition-transform group-hover:scale-110 ${activeTab === tab.id ? 'rotate-0' : ''
+                }`} />
               <span>{tab.label}</span>
             </button>
           ))}

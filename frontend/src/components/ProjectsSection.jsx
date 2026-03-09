@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           </h2>
           <div className="w-20 h-1 bg-[#155724] mx-auto mb-4" />
           <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
-            Real-world cybersecurity implementations and security enhancements
+            Real-world security implementations across AI, cloud, infrastructure, and offensive testing
           </p>
 
           {/* Filter Buttons */}
@@ -57,11 +57,10 @@ export default function ProjectsSection() {
               <button
                 key={category}
                 onClick={() => setFilter(category)}
-                className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${
-                  filter === category
+                className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${filter === category
                     ? 'bg-[#155724] text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-50 hover:text-gray-900 border border-[#155724]/30 shadow-sm'
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -86,7 +85,7 @@ export default function ProjectsSection() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                
+
                 {/* Link Overlay - Shows on Hover */}
                 {project.link && (
                   <a
@@ -105,14 +104,14 @@ export default function ProjectsSection() {
                     <ExternalLink className="w-4 h-4 text-white mt-2" />
                   </a>
                 )}
-                
+
                 {/* Badges Container */}
                 <div className="absolute top-4 left-4 right-4 flex items-start justify-between z-20">
                   {/* Category Badge */}
                   <span className="bg-[#155724] text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg">
                     {project.category}
                   </span>
-                  
+
                   {/* Featured Badge */}
                   {project.spotlight && (
                     <div className="bg-white/95 backdrop-blur-sm text-[#155724] px-3 py-1.5 rounded-lg text-xs font-bold flex items-center shadow-lg">
