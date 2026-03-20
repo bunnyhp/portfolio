@@ -9,7 +9,7 @@ export const personalInfo = {
     "Multi-Cloud Security Architect",
     "Staff Offensive Security Engineer"
   ],
-  tagline: "Architecting secure infrastructure across AI, cloud, and enterprise environments — from offensive testing to production reliability.",
+  tagline: "Architecting secure infrastructure across AI, cloud, and enterprise environments -from offensive testing to production reliability.",
   email: "mail2harshilppatel@gmail.com",
   phone: "+1 (312) 438-0016",
   location: "Austin, Texas",
@@ -448,7 +448,7 @@ export const education = [
     location: "Toledo, Ohio, USA",
     period: "August 2021 - May 2025",
     gpa: "GPA 3.9/4.0",
-    description: "Advanced studies in cybersecurity systems, focusing on AI security, cloud architecture, threat hunting, and security operations. Capstone: Founder of Autoneties — AI-powered network security for smart homes."
+    description: "Advanced studies in cybersecurity systems, focusing on AI security, cloud architecture, threat hunting, and security operations. Capstone: Founder of Autoneties -AI-powered network security for smart homes."
   },
   {
     degree: "Bachelor of Science",
@@ -456,7 +456,7 @@ export const education = [
     location: "Gandhinagar, India",
     period: "August 2016 - May 2021",
     gpa: "CGPA 7.56/10",
-    description: "Foundation in science and technology. Capstone: 'Evolution of Clinical Trials' — 3rd place, state-level pitch competition. Published: Comprehensive Review on Edible Vaccine in J. Drug Delivery Ther."
+    description: "Foundation in science and technology. Capstone: 'Evolution of Clinical Trials' -3rd place, state-level pitch competition. Published: Comprehensive Review on Edible Vaccine in J. Drug Delivery Ther."
   }
 ];
 

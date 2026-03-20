@@ -24,7 +24,7 @@ export default function AboutSection() {
     {
       icon: Cloud,
       title: 'Cloud Architecture',
-      description: 'Multi-cloud security across AWS, Azure, and GCP — IAM, VPC design, encryption, zero trust, and compliance automation',
+      description: 'Multi-cloud security across AWS, Azure, and GCP -IAM, VPC design, encryption, zero trust, and compliance automation',
       color: 'from-blue-500 to-cyan-600'
     },
     {
@@ -139,7 +139,7 @@ export default function AboutSection() {
               Most recently served as <strong>Lead Security Architect at CRS Laboratory</strong>, building enterprise-wide AI security standards, conducting threat hunting with MITRE ATT&CK, and executing full-stack penetration testing across cloud-native applications.
             </p>
             <p>
-              Expert in translating complex architectural requirements into execution — from <span className="text-[#155724] font-semibold">offensive security testing</span> to <span className="text-[#155724] font-semibold">production reliability engineering</span>, fostering a culture of security-by-design across agile teams.
+              Expert in translating complex architectural requirements into execution -from <span className="text-[#155724] font-semibold">offensive security testing</span> to <span className="text-[#155724] font-semibold">production reliability engineering</span>, fostering a culture of security-by-design across agile teams.
             </p>
           </div>
         </motion.div>

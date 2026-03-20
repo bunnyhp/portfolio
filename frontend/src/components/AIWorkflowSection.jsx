@@ -19,7 +19,7 @@ export default function AIWorkflowSection() {
       id="workflows"
       className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
     >
-      {/* Background Pattern — matches Skills / Experience sections */}
+      {/* Background Pattern -matches Skills / Experience sections */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -31,7 +31,7 @@ export default function AIWorkflowSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header — standard site pattern */}
+        {/* Header -standard site pattern */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -48,17 +48,16 @@ export default function AIWorkflowSection() {
             flows
           </p>
 
-          {/* Filter Buttons — matches ProjectsSection */}
+          {/* Filter Buttons -matches ProjectsSection */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setFilter(category)}
-                className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${
-                  filter === category
+                className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${filter === category
                     ? 'bg-[#155724] text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-50 hover:text-gray-900 border border-[#155724]/30 shadow-sm'
-                }`}
+                  }`}
               >
                 {category}
               </button>

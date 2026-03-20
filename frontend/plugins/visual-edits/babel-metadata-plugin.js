@@ -25,7 +25,7 @@ function resolveImportPath(source, fromFile) {
   } else if (source.startsWith("./") || source.startsWith("../")) {
     base = path.resolve(path.dirname(fromFile), source);
   } else {
-    // bare specifier (node_modules) — skip analysis
+    // bare specifier (node_modules) -skip analysis
     RESOLVE_CACHE.set(cacheKey, null);
     return null;
   }
@@ -918,7 +918,7 @@ const babelMetadataPlugin = ({ types: t }) => {
         })();
 
         // 🚫 If this element is a direct child of a Trigger/asChild/Slot,
-        // or itself a primitive/root, DO NOT WRAP — stamp x-* on the element itself
+        // or itself a primitive/root, DO NOT WRAP -stamp x-* on the element itself
         // and mark it with x-excluded="true".
         if (
           hasProp(openingElement, "asChild") ||
@@ -1066,7 +1066,7 @@ const babelMetadataPlugin = ({ types: t }) => {
         const parentJSXElement = jsxPath.findParent((p) => p.isJSXElement());
         const isDynamic = parentJSXElement
           ? isJSXDynamic(parentJSXElement) ||
-            hasAnyExpression(parentJSXElement.node)
+          hasAnyExpression(parentJSXElement.node)
           : false;
 
         // Add metadata attributes
